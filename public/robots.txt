@@ -1,0 +1,25 @@
+# Safari Stays & Homes - Robots.txt
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://safaristays.com/sitemap.xml
+
+# Disallow admin/private areas (when backend is added)
+Disallow: /admin/
+Disallow: /api/
+
+# Crawl-delay for polite crawlers
+Crawl-delay: 1
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
