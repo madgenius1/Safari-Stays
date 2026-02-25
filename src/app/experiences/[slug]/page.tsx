@@ -42,10 +42,10 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
           alt={experience.coverImage.alt}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-          <div className="max-w-[1440px] mx-auto">
+          <div className="max-w-360 mx-auto">
             <a
               href="/experiences"
               className="inline-flex items-center text-white/80 hover:text-white mb-4 transition-colors"
@@ -87,7 +87,7 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Left: Details */}
           <div className="lg:col-span-2 space-y-12">
@@ -103,7 +103,7 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {experience.highlights.map((highlight, i) => (
                   <div key={i} className="flex items-start space-x-3 bg-white p-4 rounded-xl border border-[#E8E3DB]">
-                    <Check size={20} className="text-[#C5A059] flex-shrink-0 mt-0.5" />
+                    <Check size={20} className="text-[#C5A059] shrink-0 mt-0.5" />
                     <span className="text-[#1A1A1A]/80">{highlight}</span>
                   </div>
                 ))}
@@ -119,7 +119,7 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
                   <ul className="space-y-2">
                     {experience.included.map((item, i) => (
                       <li key={i} className="flex items-start space-x-2">
-                        <Check size={18} className="text-green-600 flex-shrink-0 mt-0.5" />
+                        <Check size={18} className="text-green-600 shrink-0 mt-0.5" />
                         <span className="text-[#1A1A1A]/80 text-sm">{item}</span>
                       </li>
                     ))}
@@ -130,7 +130,7 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
                   <ul className="space-y-2">
                     {experience.notIncluded.map((item, i) => (
                       <li key={i} className="flex items-start space-x-2">
-                        <X size={18} className="text-[#1A1A1A]/30 flex-shrink-0 mt-0.5" />
+                        <X size={18} className="text-[#1A1A1A]/30 shrink-0 mt-0.5" />
                         <span className="text-[#1A1A1A]/60 text-sm">{item}</span>
                       </li>
                     ))}
@@ -144,7 +144,7 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
               <h2 className="text-3xl font-instrument-serif mb-6 border-b border-[#E8E3DB] pb-4">Meeting Point</h2>
               <div className="bg-white p-6 rounded-2xl border border-[#E8E3DB]">
                 <div className="flex items-start space-x-3">
-                  <MapPin size={24} className="text-[#C5A059] flex-shrink-0" />
+                  <MapPin size={24} className="text-[#C5A059] shrink-0" />
                   <div>
                     <p className="font-bold mb-1">Location</p>
                     <p className="text-[#1A1A1A]/70 mb-3">{experience.meetingPoint}</p>
@@ -159,7 +159,7 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
               <h2 className="text-3xl font-instrument-serif mb-6 border-b border-[#E8E3DB] pb-4">Important Information</h2>
               <div className="bg-blue-50 border border-blue-200 rounded-2xl p-6">
                 <div className="flex items-start space-x-3">
-                  <Info size={24} className="text-blue-600 flex-shrink-0" />
+                  <Info size={24} className="text-blue-600 shrink-0" />
                   <div className="space-y-2 text-sm text-[#1A1A1A]/80">
                     <p><strong>Group Size:</strong> {experience.groupSize.min} to {experience.groupSize.max} participants</p>
                     <p><strong>Duration:</strong> {experience.duration}</p>
@@ -221,23 +221,23 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
                 <h3 className="font-bold mb-4">Why Book With Us?</h3>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-start space-x-2">
-                    <Check size={16} className="flex-shrink-0 mt-0.5" />
+                    <Check size={16} className="shrink-0 mt-0.5" />
                     <span>Expert local guides</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <Check size={16} className="flex-shrink-0 mt-0.5" />
+                    <Check size={16} className="shrink-0 mt-0.5" />
                     <span>Small group sizes</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <Check size={16} className="flex-shrink-0 mt-0.5" />
+                    <Check size={16} className="shrink-0 mt-0.5" />
                     <span>Free cancellation (48h)</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <Check size={16} className="flex-shrink-0 mt-0.5" />
+                    <Check size={16} className="shrink-0 mt-0.5" />
                     <span>24/7 support</span>
                   </li>
                   <li className="flex items-start space-x-2">
-                    <Check size={16} className="flex-shrink-0 mt-0.5" />
+                    <Check size={16} className="shrink-0 mt-0.5" />
                     <span>Best price guarantee</span>
                   </li>
                 </ul>

@@ -99,7 +99,7 @@ export default function FAQPage() {
                 <span className="font-bold text-lg pr-4">{faq.question}</span>
                 <ChevronDown
                   size={24}
-                  className={`flex-shrink-0 text-[#C5A059] transition-transform ${
+                  className={`shrink-0 text-[#C5A059] transition-transform ${
                     openQuestion === faq.id ? "rotate-180" : ""
                   }`}
                 />

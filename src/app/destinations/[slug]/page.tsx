@@ -41,10 +41,10 @@ export default function DestinationDetailPage({ params }: { params: { slug: stri
           alt={destination.coverImage.alt}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/30 to-transparent" />
 
         <div className="absolute bottom-0 left-0 right-0 p-8 text-white">
-          <div className="max-w-[1440px] mx-auto">
+          <div className="max-w-360 mx-auto">
             <a
               href="/destinations"
               className="inline-flex items-center text-white/80 hover:text-white mb-4 transition-colors"
@@ -78,7 +78,7 @@ export default function DestinationDetailPage({ params }: { params: { slug: stri
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
           {/* Left: Description & Details */}

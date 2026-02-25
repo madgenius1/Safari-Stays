@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 export default function VibeSelector() {
   return (
     <section className="py-24 bg-[#FDFBF7]">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 space-y-4 md:space-y-0">
           <div>
             <span className="text-[#C5A059] font-bold uppercase tracking-widest text-xs">
@@ -28,14 +28,14 @@ export default function VibeSelector() {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
               viewport={{ once: true }}
-              className="flex-shrink-0 w-[300px] h-[400px] relative rounded-2xl overflow-hidden group cursor-pointer"
+              className="shrink-0 w-75 h-100 relative rounded-2xl overflow-hidden group cursor-pointer"
             >
               <img
                 src={vibe.image}
                 alt={vibe.label}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent" />
               <div className="absolute bottom-6 left-6">
                 <h3 className="text-white text-2xl font-instrument-serif">
                   {vibe.label}

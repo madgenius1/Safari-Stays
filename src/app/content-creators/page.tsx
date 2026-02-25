@@ -67,7 +67,7 @@ export default function ContentCreatorsPage() {
 
   return (
     <div className="bg-[#FDFBF7] min-h-screen pt-24 pb-20">
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-360 mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -110,7 +110,7 @@ export default function ContentCreatorsPage() {
               animate={{ opacity: 1, x: 0 }}
               className="relative"
             >
-              <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl">
+              <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-2xl">
                 <img
                   src="https://images.unsplash.com/photo-1493246507139-91e8bef99c02?auto=format&fit=crop&w=800"
                   alt="Creator working on laptop with scenic view"
@@ -239,7 +239,7 @@ export default function ContentCreatorsPage() {
                 viewport={{ once: true }}
                 className="group bg-white rounded-3xl overflow-hidden border border-[#E8E3DB] hover:shadow-2xl hover:shadow-black/5 transition-all"
               >
-                <div className="relative aspect-[4/3] overflow-hidden">
+                <div className="relative aspect-4/3 overflow-hidden">
                   <img
                     src={property.images[0].url}
                     alt={property.name}

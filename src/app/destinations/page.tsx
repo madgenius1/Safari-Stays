@@ -17,7 +17,7 @@ export default function DestinationsPage() {
 
   return (
     <div className="bg-[#FDFBF7] min-h-screen pt-32 pb-24">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         {/* Header */}
         <div className="mb-16">
           <motion.div
@@ -77,7 +77,7 @@ export default function DestinationsPage() {
                   alt={destination.coverImage.alt}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-black/20 to-transparent" />
 
                 {/* Featured Badge */}
                 {destination.featured && (

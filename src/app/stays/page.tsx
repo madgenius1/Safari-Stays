@@ -11,7 +11,7 @@ export default function StaysListingPage() {
 
   return (
     <div className="bg-[#FDFBF7] min-h-screen pt-32 pb-24">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         {/* Header */}
         <div className="mb-16">
           <h1 className="text-5xl md:text-7xl font-instrument-serif text-[#1A1A1A] mb-4">

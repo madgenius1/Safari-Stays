@@ -20,7 +20,7 @@ export function PropertyDetailSkeleton() {
   return (
     <div className="bg-[#FDFBF7] min-h-screen pt-24 pb-20 animate-pulse">
       <div className="h-[60vh] bg-[#E8E3DB] mb-16" />
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2 space-y-8">
             <div className="h-8 bg-[#E8E3DB] rounded w-1/2" />

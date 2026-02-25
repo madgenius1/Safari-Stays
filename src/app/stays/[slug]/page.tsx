@@ -30,7 +30,7 @@ export default function PropertyDetailPage({ params }) {
 
   return (
     <div className="bg-[#FDFBF7] min-h-screen pt-24 pb-20">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         {/* Navigation / Breadcrumbs */}
         <div className="mb-8">
           <a

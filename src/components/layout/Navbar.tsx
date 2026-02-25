@@ -31,7 +31,7 @@ export default function Navbar() {
           : "bg-transparent py-4 md:py-6"
       }`}
     >
-      <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-360 mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <a
           href="/"

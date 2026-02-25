@@ -6,7 +6,7 @@ import { Heart, Shield, Wifi, Users, Award, MapPin } from "lucide-react";
 export default function AboutPage() {
   return (
     <div className="bg-[#FDFBF7] min-h-screen pt-32 pb-24">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         {/* Hero */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ export default function AboutPage() {
             <img
               src="https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800"
               alt="Kenya Landscape"
-              className="rounded-3xl shadow-2xl w-full h-[500px] object-cover"
+              className="rounded-3xl shadow-2xl w-full h-125 object-cover"
             />
           </div>
           <div className="flex flex-col justify-center">

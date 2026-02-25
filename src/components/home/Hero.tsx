@@ -24,7 +24,7 @@ export default function Hero() {
               "url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1920')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/20 to-transparent" />
       </motion.div>
 
       {/* Content */}
@@ -56,7 +56,7 @@ export default function Hero() {
           className="bg-white p-3 sm:p-4 rounded-2xl md:rounded-full shadow-2xl flex flex-col md:flex-row items-center gap-3 sm:gap-4 max-w-3xl mx-auto"
         >
           <div className="flex items-center space-x-3 px-4 w-full md:w-auto border-b md:border-b-0 md:border-r border-[#E8E3DB] pb-3 md:pb-0">
-            <MapPin className="text-[#C5A059] flex-shrink-0" size={20} />
+            <MapPin className="text-[#C5A059] shrink-0" size={20} />
             <input
               type="text"
               placeholder="Where are you going?"
@@ -65,7 +65,7 @@ export default function Hero() {
           </div>
 
           <div className="flex items-center space-x-3 px-4 w-full md:w-auto border-b md:border-b-0 md:border-r border-[#E8E3DB] pb-3 md:pb-0">
-            <Calendar className="text-[#C5A059] flex-shrink-0" size={20} />
+            <Calendar className="text-[#C5A059] shrink-0" size={20} />
             <input
               type="text"
               placeholder="Add dates"

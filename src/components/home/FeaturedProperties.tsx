@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 export default function FeaturedProperties() {
   return (
     <section className="py-24 bg-white">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-instrument-serif mb-4">
             Featured Stays
@@ -28,7 +28,7 @@ export default function FeaturedProperties() {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6 shadow-lg">
+              <div className="relative aspect-4/3 rounded-2xl overflow-hidden mb-6 shadow-lg">
                 <img
                   src={property.images[0].url}
                   alt={property.name}

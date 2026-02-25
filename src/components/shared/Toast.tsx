@@ -106,13 +106,13 @@ function ToastItem({ toast, onClose }: { toast: Toast; onClose: (id: string) => 
       initial={{ opacity: 0, x: 100, scale: 0.8 }}
       animate={{ opacity: 1, x: 0, scale: 1 }}
       exit={{ opacity: 0, x: 100, scale: 0.8 }}
-      className={`${colors[toast.type]} border-2 rounded-2xl shadow-lg p-4 flex items-start space-x-3 min-w-[300px]`}
+      className={`${colors[toast.type]} border-2 rounded-2xl shadow-lg p-4 flex items-start space-x-3 min-w-75`}
     >
-      <Icon size={24} className={`flex-shrink-0 ${iconColors[toast.type]}`} />
+      <Icon size={24} className={`shrink-0 ${iconColors[toast.type]}`} />
       <p className="flex-1 text-sm font-medium">{toast.message}</p>
       <button
         onClick={() => onClose(toast.id)}
-        className="flex-shrink-0 hover:opacity-70 transition-opacity"
+        className="shrink-0 hover:opacity-70 transition-opacity"
       >
         <X size={18} />
       </button>

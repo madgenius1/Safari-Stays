@@ -29,7 +29,7 @@ export default function Testimonials() {
 
   return (
     <section className="py-24 bg-[#FDFBF7]">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-instrument-serif">
             What Our Travelers Say
@@ -77,7 +77,7 @@ export default function Testimonials() {
                 )}
                 <p className="text-sm leading-relaxed">{review.text}</p>
                 <div
-                  className={`absolute top-0 ${review.isBusiness ? "right-[-8px]" : "left-[-8px]"} w-0 h-0 border-8 border-transparent ${
+                  className={`absolute top-0 ${review.isBusiness ? "-right-2" : "-left-2"} w-0 h-0 border-8 border-transparent ${
                     review.isBusiness
                       ? "border-l-[#2D4032] border-t-[#2D4032]"
                       : "border-r-white border-t-white"

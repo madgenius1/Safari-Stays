@@ -6,7 +6,7 @@ import { MessageCircle, Mail, MapPin, Phone, Clock } from "lucide-react";
 export default function ContactPage() {
   return (
     <div className="bg-[#FDFBF7] min-h-screen pt-32 pb-24">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -36,7 +36,7 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="flex items-start space-x-4 p-6 bg-white rounded-2xl border border-[#E8E3DB] hover:border-[#C5A059] hover:shadow-lg transition-all group"
               >
-                <div className="w-12 h-12 bg-[#25D366]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#25D366]/10 rounded-full flex items-center justify-center shrink-0">
                   <MessageCircle size={24} className="text-[#25D366]" />
                 </div>
                 <div>
@@ -54,7 +54,7 @@ export default function ContactPage() {
 
               {/* Email */}
               <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl border border-[#E8E3DB]">
-                <div className="w-12 h-12 bg-[#C5A059]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#C5A059]/10 rounded-full flex items-center justify-center shrink-0">
                   <Mail size={24} className="text-[#C5A059]" />
                 </div>
                 <div>
@@ -73,7 +73,7 @@ export default function ContactPage() {
 
               {/* Phone */}
               <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl border border-[#E8E3DB]">
-                <div className="w-12 h-12 bg-[#C5A059]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#C5A059]/10 rounded-full flex items-center justify-center shrink-0">
                   <Phone size={24} className="text-[#C5A059]" />
                 </div>
                 <div>
@@ -89,7 +89,7 @@ export default function ContactPage() {
 
               {/* Location */}
               <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl border border-[#E8E3DB]">
-                <div className="w-12 h-12 bg-[#C5A059]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#C5A059]/10 rounded-full flex items-center justify-center shrink-0">
                   <MapPin size={24} className="text-[#C5A059]" />
                 </div>
                 <div>
@@ -104,7 +104,7 @@ export default function ContactPage() {
 
               {/* Hours */}
               <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl border border-[#E8E3DB]">
-                <div className="w-12 h-12 bg-[#C5A059]/10 rounded-full flex items-center justify-center flex-shrink-0">
+                <div className="w-12 h-12 bg-[#C5A059]/10 rounded-full flex items-center justify-center shrink-0">
                   <Clock size={24} className="text-[#C5A059]" />
                 </div>
                 <div>
