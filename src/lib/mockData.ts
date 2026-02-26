@@ -6,7 +6,7 @@ export { destinations } from './mockData.destinations';
 export { experiences } from './mockData.experiences';
 export { blogPosts, blogCategories } from './mockData.blogPosts';
 export { reviews, testimonials } from './mockData.reviews';
-export { seasons, vibeCategories, faqs } from './mockData.misc';
+export { seasons, vibeCategories, } from './mockData.misc';
 
 // Import for utility functions
 import { properties } from './mockData.properties';
@@ -14,7 +14,7 @@ import { destinations } from './mockData.destinations';
 import { experiences } from './mockData.experiences';
 import { blogPosts, blogCategories } from './mockData.blogPosts';
 import { reviews, testimonials } from './mockData.reviews';
-import { seasons, vibeCategories, faqs } from './mockData.misc';
+import { seasons, vibeCategories, } from './mockData.misc';
 
 // Legacy export for backward compatibility
 export const vibes = vibeCategories;
@@ -78,18 +78,18 @@ export const mockDataStats = {
     total: testimonials.length,
     verified: testimonials.filter(t => t.verified).length,
   },
-  faqs: {
-    total: faqs.length,
-    byCategory: {
-      booking: faqs.filter(f => f.category === 'booking').length,
-      payment: faqs.filter(f => f.category === 'payment').length,
-      properties: faqs.filter(f => f.category === 'properties').length,
-      wifi: faqs.filter(f => f.category === 'wifi').length,
-      safety: faqs.filter(f => f.category === 'safety').length,
-      cancellation: faqs.filter(f => f.category === 'cancellation').length,
-      general: faqs.filter(f => f.category === 'general').length,
-    },
-  },
+  // faqs: {
+  //   total: faqs.length,
+  //   byCategory: {
+  //     booking: faqs.filter(f => f.category === 'booking').length,
+  //     payment: faqs.filter(f => f.category === 'payment').length,
+  //     properties: faqs.filter(f => f.category === 'properties').length,
+  //     wifi: faqs.filter(f => f.category === 'wifi').length,
+  //     safety: faqs.filter(f => f.category === 'safety').length,
+  //     cancellation: faqs.filter(f => f.category === 'cancellation').length,
+  //     general: faqs.filter(f => f.category === 'general').length,
+  //   },
+  // },
 };
 
 // UTILITY FUNCTIONS
@@ -143,11 +143,11 @@ export const getPropertyReviews = (propertyId: string) => {
 /**
  * Get FAQs by category
  */
-export const getFAQsByCategory = (category: string) => {
-  return faqs.filter(f => f.category === category).sort((a, b) => 
-    (a.order || 999) - (b.order || 999)
-  );
-};
+// export const getFAQsByCategory = (category: string) => {
+//   return faqs.filter(f => f.category === category).sort((a, b) => 
+//     (a.order || 999) - (b.order || 999)
+//   );
+// };
 
 /**
  * Search properties

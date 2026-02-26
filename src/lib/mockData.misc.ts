@@ -1,5 +1,62 @@
 import { BlogPost, BlogCategory } from './types';
 
+export const seasons = [
+  {
+    name: "Regular",
+    multiplier: 1.0,
+    dateRanges: [], // Default
+  },
+  {
+    name: "Peak",
+    multiplier: 1.3,
+    dateRanges: [
+      { start: "2026-06-01", end: "2026-08-31" },
+      { start: "2026-12-15", end: "2026-12-31" },
+    ],
+  },
+  {
+    name: "Off-Peak",
+    multiplier: 0.8,
+    dateRanges: [
+      { start: "2026-03-01", end: "2026-05-31" },
+      { start: "2026-10-01", end: "2026-11-30" },
+    ],
+  },
+];
+
+export const vibeCategories = [
+  {
+    id: "urban",
+    label: "Urban Chic",
+    image:
+      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800",
+  },
+  {
+    id: "wild",
+    label: "Wild Retreats",
+    image:
+      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800",
+  },
+  {
+    id: "coastal",
+    label: "Coastal Bliss",
+    image:
+      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800",
+  },
+  {
+    id: "mountain",
+    label: "Mountain Escapes",
+    image:
+      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800",
+  },
+  {
+    id: "lake",
+    label: "Lake Serenity",
+    image:
+      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800",
+  },
+];
+
 export const blogCategories: BlogCategory[] = [
   {
     id: 'cat-1',

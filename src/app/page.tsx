@@ -1,3 +1,5 @@
+'use client'
+
 import Hero from "../components/home/Hero";
 import VibeSelector from "../components/home/VibeSelector";
 import NewsletterCTA from "../components/home/NewsletterCTA";

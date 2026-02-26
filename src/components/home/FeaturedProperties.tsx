@@ -1,3 +1,5 @@
+'use client'
+
 import { MapPin, Wifi } from "lucide-react";
 import { properties } from "../../lib/mockData";
 import { formatKES } from "../../utils/formatting";

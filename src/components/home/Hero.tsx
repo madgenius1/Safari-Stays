@@ -1,3 +1,5 @@
+'use client'
+
 import { Search, Calendar, MapPin } from "lucide-react";
 import { motion } from "motion/react";
 
