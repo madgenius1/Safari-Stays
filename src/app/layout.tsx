@@ -5,6 +5,7 @@ import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import WhatsAppWidget from "../components/layout/WhatsAppWidget";
 import { ToastProvider } from "../components/shared/Toast";
+import Link from "next/link";
 
 // Font configurations
 const instrumentSerif = Instrument_Serif({
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://safaristays.come",
+    url: "https://safaristays.com",
     siteName: "Safari Stays & Homes",
     title: "Safari Stays & Homes | Premium Kenya Travel Marketplace",
     description:
@@ -82,6 +83,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        <link rel="icon" href="/images/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <meta name="theme-color" content="#2D4032" />
@@ -90,12 +92,12 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-safari-bone text-safari-charcoal overflow-x-hidden">
         <ToastProvider>
           {/* Skip to main content link for accessibility */}
-          <a
+          <Link
             href="#main-content"
             className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-safari-green focus:text-white focus:rounded-xl focus:font-bold focus:shadow-2xl"
           >
             Skip to main content
-          </a>
+          </Link>
 
           {/* Navigation */}
           <Navbar />

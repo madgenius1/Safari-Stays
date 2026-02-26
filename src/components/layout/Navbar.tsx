@@ -3,6 +3,8 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -25,20 +27,25 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-[#FDFBF7] shadow-sm py-3 md:py-4"
-          : "bg-transparent py-4 md:py-6"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
+        ? "bg-[#FDFBF7] shadow-sm py-3 md:py-4"
+        : "bg-transparent py-4 md:py-6"
+        }`}
     >
       <div className="max-w-360 mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
-        <a
+        <Link
           href="/"
           className={`text-xl sm:text-2xl font-instrument-serif transition-colors ${isScrolled ? "text-[#1A1A1A]" : "text-white"}`}
         >
-          Safari Stays
-        </a>
+          <Image
+            src="/images/logo.webp"
+            alt="Zanari Logo"
+            width={120}
+            height={80}
+            className="rounded-sm"
+          />
+        </Link>
 
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
@@ -46,9 +53,8 @@ export default function Navbar() {
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium hover:text-[#C5A059] transition-colors ${
-                isScrolled ? "text-[#1A1A1A]" : "text-white"
-              }`}
+              className={`text-sm font-medium hover:text-[#C5A059] transition-colors ${isScrolled ? "text-[#1A1A1A]" : "text-white"
+                }`}
             >
               {link.name}
             </a>
@@ -61,11 +67,10 @@ export default function Navbar() {
             href="https://wa.me/254700000000?text=Hi! I need help planning my Kenya trip."
             target="_blank"
             rel="noopener noreferrer"
-            className={`flex items-center space-x-2 px-6 py-2.5 rounded-full border transition-all ${
-              isScrolled
-                ? "border-[#2D4032] text-[#2D4032] hover:bg-[#2D4032] hover:text-white"
-                : "border-white text-white hover:bg-white hover:text-[#2D4032]"
-            }`}
+            className={`flex items-center space-x-2 px-6 py-2.5 rounded-full border transition-all ${isScrolled
+              ? "border-[#2D4032] text-[#2D4032] hover:bg-[#2D4032] hover:text-white"
+              : "border-white text-white hover:bg-white hover:text-[#2D4032]"
+              }`}
           >
             <span className="text-sm font-semibold">Plan My Trip</span>
           </a>
@@ -124,6 +129,6 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </nav >
   );
 }

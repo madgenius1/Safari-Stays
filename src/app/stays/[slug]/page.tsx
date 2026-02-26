@@ -1,10 +1,10 @@
 "use client";
 
 import { properties } from "../../../lib/mockData";
-import ImageGallery from "../../../components/property-detail/ImageGallery";
-import StatsBar from "../../../components/property-detail/StatsBar";
-import BookingPanel from "../../../components/property-detail/BookingPanel";
-import AmenitiesGrid from "../../../components/property-detail/AmenitiesGrid";
+import ImageGallery from "@/src/components/property-detail/ImageGallery";
+// import StatsBar from "../../../components/property-detail/StatsBar";
+import BookingPanel from "@/src/components/property-detail/BookingPanel";
+import AmenitiesList from "@/src/components/property-detail/AmenitiesList";
 import Testimonials from "../../../components/home/Testimonials";
 import { MapPin, ArrowLeft, Clock, Shield, Info } from "lucide-react";
 import { motion } from "motion/react";
@@ -63,10 +63,10 @@ export default function PropertyDetailPage({ params }) {
         <div className="mt-16 grid grid-cols-1 lg:grid-cols-3 gap-16">
           {/* Left Column: Details */}
           <div className="lg:col-span-2 space-y-12">
-            <StatsBar
+            {/* <StatsBar
               capacity={property.capacity}
               wifiSpeed={property.wifiSpeed}
-            />
+            /> */}
 
             <section className="space-y-6">
               <h2 className="text-3xl font-instrument-serif border-b border-[#E8E3DB] pb-4">
@@ -77,7 +77,7 @@ export default function PropertyDetailPage({ params }) {
               </div>
             </section>
 
-            <AmenitiesGrid
+            <AmenitiesList
               amenities={property.amenities}
               highlights={property.highlights}
             />
