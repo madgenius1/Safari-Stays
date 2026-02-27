@@ -1,5 +1,6 @@
 "use client";
 
+import { use } from "react";
 import { properties } from "../../../lib/mockData";
 import ImageGallery from "@/src/components/property-detail/ImageGallery";
 // import StatsBar from "../../../components/property-detail/StatsBar";
@@ -7,12 +8,21 @@ import BookingPanel from "@/src/components/property-detail/BookingPanel";
 import AmenitiesList from "@/src/components/property-detail/AmenitiesList";
 import Testimonials from "../../../components/home/Testimonials";
 import { MapPin, ArrowLeft, Clock, Shield, Info } from "lucide-react";
-import { motion } from "motion/react";
 
-export default function PropertyDetailPage({ params }) {
-  const { slug } = params || {};
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+
+export default function PropertyDetailPage({ params }: PageProps) {
+
+  const resolvedParams = use(params);
+  const slug = resolvedParams?.slug;
+  // const { slug } = use(params);
+
   const property = properties.find((p) => p.slug === slug);
-
   if (!property) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-[#FDFBF7]">

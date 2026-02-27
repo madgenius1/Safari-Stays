@@ -4,7 +4,6 @@ import { useState } from "react";
 import { properties } from "../../lib/mockData";
 import PropertyCard from "../../components/stays/PropertyCard";
 import FilterBar from "../../components/stays/FilterBar";
-import { motion } from "motion/react";
 
 export default function StaysListingPage() {
   const [activeVibe, setActiveVibe] = useState("all");
@@ -17,7 +16,7 @@ export default function StaysListingPage() {
           <h1 className="text-5xl md:text-7xl font-instrument-serif text-[#1A1A1A] mb-4">
             Curated Stays
           </h1>
-          <p className="text-xl text-[#1A1A1A]/60 max-w-2xl leading-relaxed font-instrument-serif italic">
+          <p className="text-xl text-[#1A1A1A]/80 max-w-4xl leading-relaxed font-instrument-serif ">
             From luxury lofts in the city to eco-retreats in the heart of the
             savannah. Every home is verified for quality and connection.
           </p>

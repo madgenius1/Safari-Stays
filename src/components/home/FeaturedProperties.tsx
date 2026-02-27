@@ -4,6 +4,7 @@ import { MapPin, Wifi } from "lucide-react";
 import { properties } from "../../lib/mockData";
 import { formatKES } from "../../utils/formatting";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 export default function FeaturedProperties() {
   return (
@@ -39,15 +40,14 @@ export default function FeaturedProperties() {
                 />
                 <div className="absolute top-4 right-4 flex flex-col gap-2">
                   <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1 shadow-sm">
-                    <Wifi size={14} className="text-[#2D4032]" />
                     <span className="text-[10px] font-bold text-[#2D4032]">
-                      {property.wifiSpeed}
+                      From Ksh. {property.pricing.basePrice}
                     </span>
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-2 border-b mb-4">
                 <div className="flex items-center text-[#1A1A1A]/60 text-xs font-bold uppercase tracking-widest">
                   <MapPin size={12} className="mr-1 text-[#C5A059]" />
                   {property.location.area}
@@ -67,12 +67,12 @@ export default function FeaturedProperties() {
         </div>
 
         <div className="mt-16 text-center">
-          <a
+          <Link
             href="/stays"
             className="inline-block border-b-2 border-[#2D4032] pb-1 font-bold text-[#2D4032] hover:text-[#C5A059] hover:border-[#C5A059] transition-all"
           >
             View All Stays
-          </a>
+          </Link>
         </div>
       </div>
     </section>

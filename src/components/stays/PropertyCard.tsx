@@ -18,14 +18,6 @@ export default function PropertyCard({ property }) {
           alt={property.name}
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
-        <div className="absolute top-4 left-4">
-          <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full flex items-center space-x-1 shadow-sm">
-            <Wifi size={14} className="text-[#2D4032]" />
-            <span className="text-[10px] font-bold text-[#2D4032]">
-              {property.wifiSpeed}
-            </span>
-          </div>
-        </div>
         <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center">
           <div className="bg-[#2D4032]/80 backdrop-blur-sm text-white px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider">
             {property.location.area}
