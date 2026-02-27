@@ -1,6 +1,6 @@
 'use client'
 
-import { Search, Calendar, MapPin } from "lucide-react";
+import { Search, Calendar, MapPin, ArrowRight } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function Hero() {
@@ -8,6 +8,11 @@ export default function Hero() {
     e.preventDefault();
     // Redirect to stays page
     window.location.href = "/stays";
+  };
+
+  const itemVars = {
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } }
   };
 
   return (
@@ -51,37 +56,47 @@ export default function Hero() {
 
         {/* Search Bar */}
         <motion.form
+          variants={itemVars}
           onSubmit={handleSearch}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="bg-white p-3 sm:p-4 rounded-2xl md:rounded-full shadow-2xl flex flex-col md:flex-row items-center gap-3 sm:gap-4 max-w-3xl mx-auto"
+          className="bg-white/95 backdrop-blur-xl p-2 rounded-2xl md:rounded-full shadow-[0_20px_50px_rgba(0,0,0,0.3)] flex flex-col md:flex-row items-center gap-2 max-w-4xl mx-auto border border-white/20"
         >
-          <div className="flex items-center space-x-3 px-4 w-full md:w-auto border-b md:border-b-0 md:border-r border-[#E8E3DB] pb-3 md:pb-0">
-            <MapPin className="text-[#C5A059] shrink-0" size={20} />
-            <input
-              type="text"
-              placeholder="Where are you going?"
-              className="bg-transparent border-none focus:ring-0 text-sm font-medium w-full outline-none"
-            />
+          {/* Location */}
+          <div className="flex items-center flex-1 w-full px-6 py-3 gap-3 border-b md:border-b-0 md:border-r border-gray-200 group">
+            <MapPin className="text-[#C5A059] group-hover:scale-110 transition-transform" size={22} />
+            <div className="flex flex-col items-start w-full">
+              <span className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Destination</span>
+              <input
+                type="text"
+                placeholder="Where to?"
+                className="bg-transparent border-none focus:ring-0 text-sm font-semibold w-full outline-none text-gray-800 placeholder:text-gray-400"
+              />
+            </div>
           </div>
 
-          <div className="flex items-center space-x-3 px-4 w-full md:w-auto border-b md:border-b-0 md:border-r border-[#E8E3DB] pb-3 md:pb-0">
-            <Calendar className="text-[#C5A059] shrink-0" size={20} />
-            <input
-              type="text"
-              placeholder="Add dates"
-              onFocus={(e) => (e.target.type = "date")}
-              className="bg-transparent border-none focus:ring-0 text-sm font-medium w-full outline-none"
-            />
+          {/* Date Picker */}
+          <div className="flex items-center flex-1 w-full px-6 py-3 gap-3">
+            <Calendar className="text-[#C5A059]" size={22} />
+            <div className="flex flex-col items-start w-full">
+              <span className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Travel Dates</span>
+              <input
+                type="text"
+                placeholder="Add dates"
+                onFocus={(e) => (e.target.type = "date")}
+                onBlur={(e) => (e.target.type = "text")}
+                className="bg-transparent border-none focus:ring-0 text-sm font-semibold w-full outline-none text-gray-800"
+              />
+            </div>
           </div>
 
+          {/* Submit Button */}
           <button
             type="submit"
-            className="w-full md:w-auto bg-[#2D4032] text-white px-6 sm:px-8 py-3 md:py-3 rounded-xl md:rounded-full font-bold flex items-center justify-center space-x-2 hover:bg-[#1e2a21] transition-colors"
+            className="w-full md:w-auto bg-[#2D4032] hover:bg-[#1a261d] text-white pl-8 pr-6 py-4 md:py-4 rounded-xl md:rounded-full font-bold flex items-center justify-center gap-4 transition-all active:scale-95 group"
           >
-            <Search size={18} />
-            <span className="text-sm sm:text-base">Explore Stays</span>
+            <span className="text-sm">Search Stays</span>
+            <div className="bg-white/10 rounded-full p-2 group-hover:translate-x-1 transition-transform">
+              <ArrowRight size={18} />
+            </div>
           </button>
         </motion.form>
       </div>
