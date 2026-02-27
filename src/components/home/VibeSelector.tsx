@@ -10,7 +10,7 @@ export default function VibeSelector() {
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 space-y-4 md:space-y-0">
           <div>
             <span className="text-[#C5A059] font-bold uppercase tracking-widest text-sm">
-              Curated Experiences
+              Curated Activities
             </span>
             <h2 className="text-4xl font-instrument-serif font-medium text-[#1A1A1A] mt-2">
               Find Your Vibe. <br /> Find Your Tribe.
@@ -43,7 +43,7 @@ export default function VibeSelector() {
                   {vibe.label}
                 </h3>
                 <span className="text-white/70 text-sm">
-                  Explore Collection →
+                  Explore Activity →
                 </span>
               </div>
             </motion.div>

@@ -12,7 +12,7 @@ export default function Testimonials() {
     },
     {
       user: "Safari Stays",
-      role: "Concierge",
+      role: "Admin",
       text: "We're so glad you enjoyed the fiber connection, Sarah! We personally test every speed before listing.",
       avatar: null,
       isBusiness: true,
@@ -32,11 +32,11 @@ export default function Testimonials() {
       <div className="max-w-360 mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-instrument-serif">
-            What Our Travelers Say
+            What Our Clients Say
           </h2>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-6">
+        <div className="max-w-6xl mx-auto space-y-6">
           {reviews.map((review, index) => (
             <motion.div
               key={index}
@@ -68,7 +68,7 @@ export default function Testimonials() {
                 {review.isBusiness && (
                   <div className="flex items-center space-x-3 mb-3">
                     <div className="w-8 h-8 rounded-full bg-[#C5A059] flex items-center justify-center text-[10px] font-bold">
-                      SS
+                      S
                     </div>
                     <span className="font-bold text-sm">
                       Safari Stays Concierge

@@ -37,7 +37,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className={`text-xl sm:text-2xl font-instrument-serif transition-colors ${isScrolled ? "text-[#1A1A1A]" : "text-gray-300"}`}
+          className={`text-xl sm:text-2xl font-instrument-serif transition-colors ${isScrolled ? "text-[#1A1A1A]" : "text-gray-700"}`}
         >
           <Image
             src="/images/logo.webp"
@@ -56,7 +56,7 @@ export default function Navbar() {
               href={link.href}
               className={`
     relative pb-1 text-lg font-medium transition-colors duration-300 group
-    ${isScrolled ? "text-[#1A1A1A]" : "text-white"}
+    ${isScrolled ? "text-[#1A1A1A]" : "text-gray-300"}
     hover:text-[#C5A059]
   `}
             >

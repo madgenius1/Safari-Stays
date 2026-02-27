@@ -82,14 +82,6 @@ export const mockDataStats = {
       activities.reduce((sum, a) => sum + a.price, 0) / activities.length
     ),
   },
-  blog: {
-    total: blogPosts.length,
-    featured: blogPosts.filter(p => p.featured).length,
-    totalViews: blogPosts.reduce((sum, p) => sum + (p.views || 0), 0),
-    averageReadTime: Math.round(
-      blogPosts.reduce((sum, p) => sum + p.readTime, 0) / blogPosts.length
-    ),
-  },
   reviews: {
     total: reviews.length,
     verified: reviews.filter(r => r.verified).length,

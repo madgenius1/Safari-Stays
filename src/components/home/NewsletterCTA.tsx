@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import Link from "next/link";
 
 export default function NewsletterCTA() {
   return (
@@ -19,7 +20,7 @@ export default function NewsletterCTA() {
             }}
           />
 
-          <div className="relative z-10 py-12 sm:py-16 lg:py-20 px-6 sm:px-8 text-center max-w-3xl mx-auto space-y-6 sm:space-y-8">
+          <div className="relative z-10 py-12 sm:py-16 lg:py-20 px-6 sm:px-8 text-center  mx-auto space-y-6 sm:space-y-8">
             <h2 className="text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-instrument-serif leading-tight">
               Ready to Discover <br className="hidden sm:block" /> the Magic of
               Kenya?
@@ -30,20 +31,20 @@ export default function NewsletterCTA() {
               home.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <a
+              <Link
                 href="https://wa.me/254700000000?text=Hi! I need help planning my Kenya journey."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto bg-[#C5A059] text-white px-8 sm:px-10 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#b08e4d] transition-colors shadow-xl shadow-black/20 text-center"
               >
                 Plan My Journey
-              </a>
-              <a
+              </Link>
+              <Link
                 href="/stays"
                 className="w-full sm:w-auto border border-white/30 text-white px-8 sm:px-10 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-white/10 transition-colors text-center"
               >
                 Browse All Stays
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>
