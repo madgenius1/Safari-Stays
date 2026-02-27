@@ -51,14 +51,26 @@ export default function Navbar() {
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium hover:text-[#C5A059] transition-colors ${isScrolled ? "text-[#1A1A1A]" : "text-white"
-                }`}
+              className={`
+    relative pb-1 text-lg font-medium transition-colors duration-300 group
+    ${isScrolled ? "text-[#1A1A1A]" : "text-white"}
+    hover:text-[#C5A059]
+  `}
             >
               {link.name}
-            </a>
+
+              {/* Custom Animated Underline */}
+              <span
+                className={`
+      absolute left-0 bottom-0 h-0.5 w-0 bg-[#C5A059] 
+      transition-all duration-300 ease-out 
+      group-hover:w-full
+    `}
+              />
+            </Link>
           ))}
         </div>
 

@@ -13,11 +13,12 @@ export default function FeaturedProperties() {
           <h2 className="text-4xl md:text-5xl font-instrument-serif mb-4">
             Featured Stays
           </h2>
-          <p className="text-[#1A1A1A]/60 max-w-xl mx-auto">
+          <p className="text-[#1A1A1A]/80 max-w-4xl font-mediuem mx-auto">
             Our hand-picked selection of the most unique and high-standard
             properties across Kenya.
           </p>
         </div>
+        {/* Add filter for stays */}
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           {properties.map((property, index) => (

@@ -1,22 +1,24 @@
 import { vibes } from "../../lib/mockData";
 import { motion } from "motion/react";
 
+//To address the specific vibes
+
 export default function VibeSelector() {
   return (
     <section className="py-24 bg-[#FDFBF7]">
       <div className="max-w-360 mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 space-y-4 md:space-y-0">
           <div>
-            <span className="text-[#C5A059] font-bold uppercase tracking-widest text-xs">
-              Curated Collections
+            <span className="text-[#C5A059] font-bold uppercase tracking-widest text-sm">
+              Curated Experiences
             </span>
-            <h2 className="text-4xl font-instrument-serif text-[#1A1A1A] mt-2">
-              Find Your Vibe
+            <h2 className="text-4xl font-instrument-serif font-medium text-[#1A1A1A] mt-2">
+              Find Your Vibe. <br /> Find Your Tribe.
             </h2>
           </div>
-          <p className="text-[#1A1A1A]/60 max-w-md">
-            Whether you're looking for city lights or savannah sunsets, we've
-            curated the perfect spots for your journey.
+          <p className="text-[#1A1A1A]/80 ">
+            Whether you are looking for city lights, savannah sunsets, or white sandy beachers, we hve
+            curated the perfect spots for your experience.
           </p>
         </div>
 

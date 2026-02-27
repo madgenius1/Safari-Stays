@@ -11,8 +11,8 @@ export default function HomePage() {
   return (
     <div className="min-h-screen">
       <Hero />
-      <VibeSelector />
       <FeaturedProperties />
+      <VibeSelector />
       <TrustBar />
       <Testimonials />
       <NewsletterCTA />
