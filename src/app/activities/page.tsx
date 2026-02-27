@@ -45,10 +45,10 @@ export default function ActivitiesPage() {
             alt="Kenya Coast Activities"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-safari-bone" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-safari-bone" />
         </div>
 
-        <div className="relative z-10 max-w-[1440px] mx-auto px-6 text-center">
+        <div className="relative z-10 max-w-360 mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ export default function ActivitiesPage() {
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 py-16">
+      <div className="max-w-360 mx-auto px-6 py-16">
         {/* Featured Activities Banner */}
         <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
@@ -98,7 +98,7 @@ export default function ActivitiesPage() {
                     alt={activity.coverImage.alt}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                  <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/40 to-transparent" />
                   <div className="absolute inset-0 p-6 flex flex-col justify-end">
                     <span className="inline-block bg-safari-gold text-white text-xs font-bold px-3 py-1.5 rounded-full mb-3 w-fit">
                       POPULAR
@@ -206,7 +206,7 @@ export default function ActivitiesPage() {
                       alt={activity.coverImage.alt}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                     
                     {/* Badges */}
                     <div className="absolute top-4 left-4 right-4 flex justify-between items-start">
@@ -307,7 +307,7 @@ export default function ActivitiesPage() {
         )}
 
         {/* CTA Section */}
-        <div className="mt-20 bg-gradient-to-br from-safari-green to-safari-green/80 text-white rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
+        <div className="mt-20 bg-linear-to-br from-safari-green to-safari-green/80 text-white rounded-3xl p-12 md:p-16 text-center relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-10 left-10 w-32 h-32 bg-white rounded-full blur-3xl" />
             <div className="absolute bottom-10 right-10 w-40 h-40 bg-safari-gold rounded-full blur-3xl" />

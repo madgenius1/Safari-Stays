@@ -26,18 +26,18 @@ export default function TrustBar() {
 
   return (
     <section className="bg-[#2D4032] py-16 text-white">
-      <div className="max-w-[1440px] mx-auto px-6">
+      <div className="max-w-360 mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           {items.map((item, index) => (
             <div
               key={index}
               className="flex flex-col items-center text-center space-y-4"
             >
-              <div className="text-[#C5A059] bg-white/10 p-4 rounded-full">
+              <div className="text-[#C5A059] bg-white/20 p-4 rounded-full">
                 {item.icon}
               </div>
-              <h3 className="font-bold text-lg">{item.title}</h3>
-              <p className="text-white/60 text-sm max-w-[200px]">{item.desc}</p>
+              <h3 className="font-semibold text-lg text-white/80 leading-relaxed">{item.title}</h3>
+              <p className="text-white/60 text-sm max-w-50">{item.desc}</p>
             </div>
           ))}
         </div>

@@ -26,8 +26,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 // Metadata
 export const metadata: Metadata = {
   title: {
-    default: "Safari Stays & Homes | Premium Kenya Travel Marketplace",
-    template: "%s | Safari Stays & Homes",
+    default: "Safari Stays and Homes | Premium Vacation Rentals, Experiences, and Travel Services in Kenya.",
+    template: "%s | Safari Stays and Homes",
   },
   description:
     "Discover verified stays across Kenya. From pristine beaches to endless savannahs, book your perfect accommodation with tested WiFi speeds and WhatsApp-first service.",
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://safaristays.com",
     siteName: "Safari Stays & Homes",
-    title: "Safari Stays & Homes | Premium Kenya Travel Marketplace",
+    title: "Safari Stays & Homes | Premium Vacation Rentals, Experiences, and Travel Services in Kenya.",
     description:
       "Discover verified stays across Kenya with tested WiFi speeds and WhatsApp-first booking.",
     images: [
@@ -94,7 +94,7 @@ export default function RootLayout({
           {/* Skip to main content link for accessibility */}
           <Link
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-safari-green focus:text-white focus:rounded-xl focus:font-bold focus:shadow-2xl"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100 focus:px-6 focus:py-3 focus:bg-safari-green focus:text-white focus:rounded-xl focus:font-bold focus:shadow-2xl"
           >
             Skip to main content
           </Link>

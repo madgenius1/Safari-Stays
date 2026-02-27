@@ -17,7 +17,7 @@ export default function VibeSelector() {
             </h2>
           </div>
           <p className="text-[#1A1A1A]/80 ">
-            Whether you are looking for city lights, savannah sunsets, or white sandy beachers, we hve
+            Whether you are looking for city lights, savannah sunsets, or white sandy beaches, we hve
             curated the perfect spots for your experience.
           </p>
         </div>
