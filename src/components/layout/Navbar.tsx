@@ -21,6 +21,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Stays", href: "/stays" },
     { name: "Destinations", href: "/destinations" },
+    { name: "Activities", href: "/activities" },
     { name: "Experiences", href: "/experiences" },
     { name: "For Creators", href: "/content-creators" },
   ];

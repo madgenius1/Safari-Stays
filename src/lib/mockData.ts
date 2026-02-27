@@ -7,10 +7,13 @@ export { experiences } from './mockData.experiences';
 export { blogPosts, blogCategories } from './mockData.blogPosts';
 export { reviews, testimonials } from './mockData.reviews';
 export { seasons, vibeCategories, } from './mockData.misc';
+export { activities, activityCategories, activityRegions, getActivitiesByRegion, getActivitiesByCategory, getFeaturedActivities, getActivityBySlug } from './mockData.activities';
+
 
 // Import for utility functions
 import { properties } from './mockData.properties';
 import { destinations } from './mockData.destinations';
+import { activities } from './mockData.activities';
 import { experiences } from './mockData.experiences';
 import { blogPosts, blogCategories } from './mockData.blogPosts';
 import { reviews, testimonials } from './mockData.reviews';
@@ -57,6 +60,25 @@ export const mockDataStats = {
     },
     averagePrice: Math.round(
       experiences.reduce((sum, e) => sum + e.price, 0) / experiences.length
+    ),
+  },
+  activities: {
+    total: activities.length,
+    featured: activities.filter(a => a.featured).length,
+    byRegion: {
+      diani: activities.filter(a => a.region === 'diani').length,
+      watamu: activities.filter(a => a.region === 'watamu').length,
+      malindi: activities.filter(a => a.region === 'malindi').length,
+    },
+    byCategory: {
+      'water-sports': activities.filter(a => a.category === 'water-sports').length,
+      photography: activities.filter(a => a.category === 'photography').length,
+      adventure: activities.filter(a => a.category === 'adventure').length,
+      wildlife: activities.filter(a => a.category === 'wildlife').length,
+      cultural: activities.filter(a => a.category === 'cultural').length,
+    },
+    averagePrice: Math.round(
+      activities.reduce((sum, a) => sum + a.price, 0) / activities.length
     ),
   },
   blog: {

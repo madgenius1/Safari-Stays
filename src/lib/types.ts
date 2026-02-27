@@ -301,3 +301,51 @@ export interface SEOMetadata {
   ogImage?: string;
   canonicalUrl?: string;
 }
+
+//ACTIVITY TYPES
+export interface Activity {
+  id: string;
+  slug: string;
+  title: string;
+  subtitle: string;
+  location: string;
+  region: 'diani' | 'watamu' | 'malindi';
+  category: 'water-sports' | 'photography' | 'adventure' | 'wildlife' | 'cultural';
+  type: string;
+  price: number;
+  originalPrice?: number;
+  currency: string;
+  duration: string;
+  groupSize: {
+    min: number;
+    max: number;
+  };
+  difficulty: 'easy' | 'moderate' | 'hard' | 'extreme';
+  featured: boolean;
+  bestFor: string[];
+  coverImage: Image;
+  gallery: Image[];
+  description: string;
+  highlights: string[];
+  included: string[];
+  notIncluded: string[];
+  itinerary?: Array<{
+    time: string;
+    activity: string;
+  }>;
+  meetingPoint: string;
+  coordinates: Coordinates;
+  availability: {
+    daysAvailable: number[];
+    startTimes: string[];
+    seasonalNotes?: string;
+  };
+  whatToBring: string[];
+  importantInfo: string[];
+  cancellationPolicy: string;
+  reviews: {
+    averageRating: number;
+    totalReviews: number;
+  };
+  seoKeywords: string[];
+}
