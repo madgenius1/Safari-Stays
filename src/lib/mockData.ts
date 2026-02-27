@@ -6,7 +6,7 @@ export { destinations } from './mockData.destinations';
 export { experiences } from './mockData.experiences';
 export { blogPosts, blogCategories } from './mockData.blogPosts';
 export { reviews, testimonials } from './mockData.reviews';
-export { seasons, vibeCategories, } from './mockData.misc';
+export { seasons, vibeCategories, faqs } from './mockData.misc';
 export { activities, activityCategories, activityRegions, getActivitiesByRegion, getActivitiesByCategory, getFeaturedActivities, getActivityBySlug } from './mockData.activities';
 
 
@@ -16,6 +16,7 @@ import { destinations } from './mockData.destinations';
 import { activities } from './mockData.activities';
 import { experiences } from './mockData.experiences';
 import { blogPosts, blogCategories } from './mockData.blogPosts';
+import { faqs } from './mockData.misc';
 import { reviews, testimonials } from './mockData.reviews';
 import { seasons, vibeCategories, } from './mockData.misc';
 
@@ -100,18 +101,18 @@ export const mockDataStats = {
     total: testimonials.length,
     verified: testimonials.filter(t => t.verified).length,
   },
-  // faqs: {
-  //   total: faqs.length,
-  //   byCategory: {
-  //     booking: faqs.filter(f => f.category === 'booking').length,
-  //     payment: faqs.filter(f => f.category === 'payment').length,
-  //     properties: faqs.filter(f => f.category === 'properties').length,
-  //     wifi: faqs.filter(f => f.category === 'wifi').length,
-  //     safety: faqs.filter(f => f.category === 'safety').length,
-  //     cancellation: faqs.filter(f => f.category === 'cancellation').length,
-  //     general: faqs.filter(f => f.category === 'general').length,
-  //   },
-  // },
+  faqs: {
+    total: faqs.length,
+     byCategory: {
+       booking: faqs.filter(f => f.category === 'booking').length,
+       payment: faqs.filter(f => f.category === 'payment').length,
+       properties: faqs.filter(f => f.category === 'properties').length,
+       wifi: faqs.filter(f => f.category === 'wifi').length,
+       safety: faqs.filter(f => f.category === 'safety').length,
+       cancellation: faqs.filter(f => f.category === 'cancellation').length,
+       general: faqs.filter(f => f.category === 'general').length,
+     },
+   },
 };
 
 // UTILITY FUNCTIONS

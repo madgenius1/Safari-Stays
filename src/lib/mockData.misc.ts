@@ -1,857 +1,300 @@
-import { BlogPost, BlogCategory } from './types';
+import { Season, VibeCategory, FAQItem } from './types';
 
-export const seasons = [
+// ============================================================================
+// SEASONS
+// ============================================================================
+
+export const seasons: Season[] = [
   {
-    name: "Regular",
+    id: 'season-1',
+    name: 'Regular',
+    description: 'Standard pricing for most of the year',
     multiplier: 1.0,
-    dateRanges: [], // Default
+    dateRanges: [],
+    color: '#6B7280',
   },
   {
-    name: "Peak",
+    id: 'season-2',
+    name: 'Peak',
+    description: 'High demand season - Great Migration period and European summer holidays',
     multiplier: 1.3,
     dateRanges: [
-      { start: "2026-06-01", end: "2026-08-31" },
-      { start: "2026-12-15", end: "2026-12-31" },
+      { start: '2026-06-15', end: '2026-09-15' },
+      { start: '2026-12-15', end: '2027-01-05' },
+      { start: '2027-06-15', end: '2027-09-15' },
     ],
+    color: '#C5A059',
+    icon: '🔥',
   },
   {
-    name: "Off-Peak",
+    id: 'season-3',
+    name: 'Off-Peak',
+    description: 'Best value season with lower prices',
     multiplier: 0.8,
     dateRanges: [
-      { start: "2026-03-01", end: "2026-05-31" },
-      { start: "2026-10-01", end: "2026-11-30" },
+      { start: '2026-03-15', end: '2026-05-31' },
+      { start: '2026-10-15', end: '2026-11-30' },
+      { start: '2027-03-15', end: '2027-05-31' },
     ],
+    color: '#10B981',
+    icon: '💰',
+  },
+  {
+    id: 'season-4',
+    name: 'Festive',
+    description: 'Holiday season with premium pricing',
+    multiplier: 1.5,
+    dateRanges: [
+      { start: '2026-12-20', end: '2027-01-06' },
+      { start: '2026-04-10', end: '2026-04-20' }, // Easter
+      { start: '2027-12-20', end: '2028-01-06' },
+    ],
+    color: '#DC2626',
+    icon: '🎄',
+  },
+  {
+    id: 'season-5',
+    name: 'Migration',
+    description: 'Great Migration season in Maasai Mara - premium safari pricing',
+    multiplier: 1.4,
+    dateRanges: [
+      { start: '2026-07-01', end: '2026-10-15' },
+      { start: '2027-07-01', end: '2027-10-15' },
+    ],
+    color: '#2D4032',
+    icon: '🦓',
   },
 ];
 
-export const vibeCategories = [
-  {
-    id: "urban",
-    label: "Urban Chic",
-    image:
-      "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800",
-  },
-  {
-    id: "wild",
-    label: "Wild Retreats",
-    image:
-      "https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800",
-  },
-  {
-    id: "coastal",
-    label: "Coastal Bliss",
-    image:
-      "https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800",
-  },
-  {
-    id: "mountain",
-    label: "Mountain Escapes",
-    image:
-      "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800",
-  },
-  {
-    id: "lake",
-    label: "Lake Serenity",
-    image:
-      "https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800",
-  },
-];
+// ============================================================================
+// VIBE CATEGORIES
+// ============================================================================
 
-export const blogCategories: BlogCategory[] = [
+export const vibeCategories: VibeCategory[] = [
   {
-    id: 'cat-1',
-    slug: 'travel-guides',
-    name: 'Travel Guides',
-    description: 'Comprehensive guides to Kenya\'s destinations',
+    id: 'all',
+    label: 'All Stays',
+    description: 'Browse our complete collection',
+    image: 'https://images.unsplash.com/photo-1503220317375-aaad61436b1b?auto=format&fit=crop&w=800',
+    color: '#1A1A1A',
+  },
+  {
+    id: 'urban',
+    label: 'Urban Chic',
+    description: 'Modern city living with all amenities',
+    image: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800',
+    color: '#4A5568',
+  },
+  {
+    id: 'wild',
+    label: 'Wild Retreats',
+    description: 'Safari lodges and wilderness escapes',
+    image: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=800',
     color: '#2D4032',
   },
   {
-    id: 'cat-2',
-    slug: 'safari-tips',
-    name: 'Safari Tips',
-    description: 'Expert advice for unforgettable wildlife experiences',
+    id: 'coastal',
+    label: 'Coastal Bliss',
+    description: 'Beachfront properties and ocean views',
+    image: 'https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?auto=format&fit=crop&w=800',
+    color: '#0EA5E9',
+  },
+  {
+    id: 'mountain',
+    label: 'Mountain Escapes',
+    description: 'Highland retreats and cool climates',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800',
+    color: '#7C3AED',
+  },
+  {
+    id: 'lake',
+    label: 'Lake Serenity',
+    description: 'Waterfront properties and aquatic adventures',
+    image: 'https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=800',
+    color: '#06B6D4',
+  },
+  {
+    id: 'luxury',
+    label: 'Luxury Collection',
+    description: 'Premium properties with exceptional service',
+    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800',
     color: '#C5A059',
   },
   {
-    id: 'cat-3',
-    slug: 'local-culture',
-    name: 'Local Culture',
-    description: 'Insights into Kenyan traditions and communities',
-    color: '#8B4513',
+    id: 'eco',
+    label: 'Eco-Friendly',
+    description: 'Sustainable and environmentally conscious stays',
+    image: 'https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800',
+    color: '#10B981',
   },
   {
-    id: 'cat-4',
-    slug: 'digital-nomad',
-    name: 'Digital Nomad',
-    description: 'Working remotely from Kenya',
-    color: '#4A90E2',
+    id: 'creator-friendly',
+    label: 'Creator-Friendly',
+    description: 'Perfect for content creators and influencers',
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800',
+    color: '#F59E0B',
   },
   {
-    id: 'cat-5',
-    slug: 'travel-tips',
-    name: 'Travel Tips',
-    description: 'Practical advice for traveling in Kenya',
-    color: '#E74C3C',
+    id: 'family',
+    label: 'Family-Friendly',
+    description: 'Spacious properties perfect for families',
+    image: 'https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=800',
+    color: '#EC4899',
+  },
+  {
+    id: 'budget',
+    label: 'Budget-Friendly',
+    description: 'Affordable comfort without compromise',
+    image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800',
+    color: '#8B5CF6',
+  },
+  {
+    id: 'cultural',
+    label: 'Cultural Immersion',
+    description: 'Authentic local experiences and heritage stays',
+    image: 'https://images.unsplash.com/photo-1559494007-9f5847c49d94?auto=format&fit=crop&w=800',
+    color: '#D97706',
   },
 ];
 
-export const blogPosts: BlogPost[] = [
+// ============================================================================
+// FAQs
+// ============================================================================
+
+export const faqs: FAQItem[] = [
+  // BOOKING & PAYMENT
   {
-    id: 'post-1',
-    slug: 'ultimate-guide-maasai-mara',
-    title: 'The Ultimate Guide to Planning Your Maasai Mara Safari',
-    excerpt: 'Everything you need to know about visiting Africa\'s greatest wildlife reserve, from the best time to visit to where to stay and what to expect.',
-    content: `
-# The Ultimate Guide to Planning Your Maasai Mara Safari
-
-The Maasai Mara is the crown jewel of Kenya's wildlife destinations. Home to the legendary Great Migration, incredible predator sightings, and the proud Maasai people, it's a bucket-list destination for wildlife enthusiasts worldwide.
-
-## When to Visit
-
-**For the Great Migration:** July to October is when millions of wildebeest cross the Mara River from Tanzania's Serengeti. This dramatic spectacle peaks in August-September.
-
-**For General Wildlife:** The Mara is excellent year-round, but June-October and January-February offer the best game viewing as vegetation is lower and animals congregate around water sources.
-
-**To Avoid Crowds:** November-December and March-June see fewer tourists. March-May is the "long rains" but offers lush landscapes and excellent photography.
-
-## Getting There
-
-**By Air:** Multiple daily flights from Nairobi's Wilson Airport (45 minutes, from Ksh 25,000). Most lodges offer airstrip pickups.
-
-**By Road:** 5-6 hours from Nairobi via Narok. Road conditions vary; 4WD recommended during rainy seasons.
-
-## Where to Stay
-
-**Luxury:** Angama Mara, Mahali Mzuri, &Beyond Kichwa Tembo
-**Mid-Range:** Mara Serena, Basecamp Mara
-**Budget:** Various campsites along the Talek River
-
-## What to Pack
-
-- Neutral-colored clothing (khaki, green, brown)
-- Wide-brimmed hat and sunglasses
-- Binoculars (essential!)
-- Camera with zoom lens (300mm minimum)
-- Insect repellent
-- Warm layers for early morning drives
-- Dust bags for electronics
-
-## Game Drive Tips
-
-1. **Early mornings are golden** - Animals are most active at dawn
-2. **Stay patient** - Wildlife watching requires time and quiet observation
-3. **Listen to your guide** - Local guides have invaluable knowledge
-4. **Respect park rules** - Stay in your vehicle and keep noise down
-5. **Bring snacks and water** - Drives can last 4-6 hours
-
-## Beyond Game Drives
-
-- **Hot air balloon safari** - Magical sunrise experience (USD 450-500)
-- **Maasai village visits** - Cultural immersion opportunities
-- **Bush breakfasts** - Al fresco dining in the savannah
-- **Sundowners** - Evening drinks with panoramic views
-
-## Budget Considerations
-
-**Conservative estimate for 3 days:**
-- Accommodation: Ksh 45,000-150,000
-- Park fees: Ksh 4,500/day (non-resident)
-- Food (if not included): Ksh 3,000-5,000/day
-- Transport: Ksh 25,000-50,000
-- Activities: Ksh 10,000-30,000
-
-**Total: Approximately Ksh 150,000-350,000 per person**
-
-## Conservation Note
-
-Your visit directly supports wildlife conservation and local Maasai communities. Choose lodges with strong conservation credentials and community programs.
-
-## Final Tips
-
-- Book accommodations 3-6 months in advance for peak season
-- Purchase comprehensive travel insurance
-- Check visa requirements (Kenya offers e-Visas)
-- Bring sufficient cash (ATMs scarce in the Mara)
-- Download offline maps
-- Charge all devices before game drives
-
-The Maasai Mara is truly magical. With proper planning, your safari will be an experience you'll treasure forever.
-    `,
-    coverImage: {
-      url: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1200',
-      alt: 'Maasai Mara Sunset',
-      type: 'hero',
-    },
-    category: blogCategories[0], // Travel Guides
-    author: {
-      name: 'Sarah Kimani',
-      avatar: 'https://i.pravatar.cc/150?img=47',
-      bio: 'Wildlife photographer and safari guide with 10+ years in the Mara',
-      role: 'Safari Expert',
-    },
-    tags: ['Maasai Mara', 'Safari Planning', 'Wildlife', 'Great Migration'],
-    relatedProperties: ['1'], // Maji Motoni Retreat
-    publishedAt: '2026-01-15T09:00:00Z',
-    readTime: 12,
-    views: 2847,
-    featured: true,
+    id: 'faq-1',
+    question: 'How do I book a property?',
+    answer: 'Booking is simple! Just click the "Book via WhatsApp" button on any property page. You\'ll be connected with our team who will help you check availability, answer questions, and confirm your booking. We use WhatsApp because it\'s faster and more personal than traditional booking systems.',
+    category: 'booking',
+    order: 1,
+  },
+  {
+    id: 'faq-2',
+    question: 'What payment methods do you accept?',
+    answer: 'We accept multiple payment methods including bank transfers (MPESA, bank deposits), credit/debit cards (Visa, Mastercard), and PayPal. Payment details will be shared via WhatsApp after you confirm your booking. We require a 50% deposit to secure your reservation, with the balance due 7 days before check-in.',
+    category: 'payment',
+    order: 2,
+  },
+  {
+    id: 'faq-3',
+    question: 'Is there a booking fee?',
+    answer: 'No! We don\'t charge any booking fees. The price you see is the price you pay. We believe in transparency, so all costs (including cleaning fees and any applicable taxes) are shown upfront in the booking summary.',
+    category: 'booking',
+    order: 3,
+  },
+  {
+    id: 'faq-4',
+    question: 'Can I modify or cancel my booking?',
+    answer: 'Yes, cancellations and modifications are possible. Our standard policy: Free cancellation up to 14 days before check-in (full refund minus payment processing fees). 7-14 days before: 50% refund. Less than 7 days: No refund. However, we\'re flexible and will work with you in case of emergencies or unexpected circumstances. Contact us via WhatsApp to discuss your situation.',
+    category: 'cancellation',
+    order: 4,
   },
 
+  // PROPERTIES & AMENITIES
   {
-    id: 'post-2',
-    slug: 'digital-nomad-nairobi-guide',
-    title: 'Complete Digital Nomad Guide to Nairobi',
-    excerpt: 'Fast WiFi, great coffee, and a thriving tech scene. Here\'s everything you need to know about working remotely from Kenya\'s capital.',
-    content: `
-# Complete Digital Nomad Guide to Nairobi
-
-Nairobi, affectionately known as the "Silicon Savannah," has emerged as one of Africa's top destinations for digital nomads. With reliable internet, affordable living, and a vibrant expat community, it's the perfect base for remote work.
-
-## Why Nairobi?
-
-**Excellent Internet:** Fiber connections up to 250Mbps are widely available. Major areas have backup generators ensuring minimal downtime.
-
-**Affordable:** Monthly expenses can range from Ksh 100,000-200,000 depending on lifestyle.
-
-**Time Zone:** GMT+3 works well for Europe, Asia, and US East Coast calls.
-
-**English-Speaking:** Business is conducted in English, making everything easier.
-
-**Strategic Location:** Easy weekend trips to beaches, safaris, and mountains.
-
-## Best Neighborhoods for Digital Nomads
-
-### Westlands
-- **Pros:** Central location, restaurants, nightlife, coworking spaces
-- **Cons:** Can be noisy, higher rent
-- **Rent:** Ksh 60,000-150,000/month for 1-bedroom
-- **WiFi:** Excellent (200Mbps+)
-
-### Kilimani
-- **Pros:** Quieter than Westlands, good cafes, safer
-- **Cons:** Less walking infrastructure
-- **Rent:** Ksh 50,000-120,000/month
-- **WiFi:** Excellent (150-250Mbps)
-
-### Karen
-- **Pros:** Spacious properties, gardens, expat community
-- **Cons:** Far from city center, need a car
-- **Rent:** Ksh 80,000-200,000/month for houses
-- **WiFi:** Very good (100-200Mbps)
-
-## Coworking Spaces
-
-1. **Nairobi Garage** - Westlands, Ksh 15,000/month
-2. **iHub** - Ngong Road, Ksh 12,000/month
-3. **Worksmith** - Westlands, Day pass Ksh 800
-4. **The Foundry** - Karen, Premium space with great coffee
-
-## Best Cafes for Working
-
-- **Java House** (Multiple locations) - Reliable WiFi, power outlets
-- **Artcaffe** - Good food, quieter atmosphere
-- **About Thyme** (Karen) - Garden seating, excellent coffee
-- **CJ's** (Karen) - Popular with expats, great breakfast
-
-## Internet & SIM Cards
-
-**Best Carriers:**
-- **Safaricom:** Most reliable, best coverage
-- **Airtel:** Good value, improving coverage
-
-**Data Plans:**
-- 50GB: Ksh 2,500/month
-- Unlimited home fiber: Ksh 5,000-8,000/month
-
-## Monthly Budget Breakdown
-
-**Conservative Budget:**
-- Rent: Ksh 60,000
-- Food: Ksh 30,000
-- Transport: Ksh 15,000
-- Internet: Ksh 6,000
-- Coworking: Ksh 15,000
-- Entertainment: Ksh 20,000
-- **Total: Ksh 146,000 (~$1,100)**
-
-**Comfortable Budget:**
-- Rent: Ksh 100,000
-- Food: Ksh 50,000
-- Transport: Ksh 25,000
-- Internet: Ksh 8,000
-- Coworking: Ksh 20,000
-- Entertainment: Ksh 40,000
-- **Total: Ksh 243,000 (~$1,850)**
-
-## Visa Information
-
-**Tourist Visa:** 90 days, renewable once (Ksh 5,000)
-**East Africa Tourist Visa:** Kenya, Uganda, Rwanda (90 days, USD 100)
-
-*Note: Working on tourist visa is technically not permitted. Consult immigration lawyer for long-term plans.*
-
-## Safety Tips
-
-- Use Uber/Bolt after dark
-- Don't display expensive items
-- Stick to well-lit, busy areas at night
-- Most residential areas have 24/7 security
-
-## Networking & Community
-
-- **Digital Nomads Kenya** (Facebook group)
-- **Nairobi Expats** (Facebook group)
-- **Tech meetups** at iHub and Nairobi Garage
-- **Hash House Harriers** (running group)
-
-## Weekends Away
-
-From Nairobi, you can reach:
-- Diani Beach: 1-hour flight
-- Maasai Mara: 45-minute flight or 5-hour drive
-- Mount Kenya: 3-hour drive
-- Lake Naivasha: 1.5-hour drive
-
-## Healthcare
-
-**Recommended Hospitals:**
-- Nairobi Hospital (Expensive but excellent)
-- Aga Khan Hospital
-- MP Shah Hospital
-
-**Insurance:** Comprehensive international health insurance recommended (USD 100-300/month)
-
-## Final Thoughts
-
-Nairobi offers an unbeatable combination of modern amenities and African adventure. The community is welcoming, the food scene is diverse, and you're never far from an incredible weekend escape.
-
-Ready to make the move? Join the growing community of digital nomads calling Nairobi home!
-    `,
-    coverImage: {
-      url: 'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200',
-      alt: 'Nairobi City Skyline',
-      type: 'hero',
-    },
-    category: blogCategories[3], // Digital Nomad
-    author: {
-      name: 'David Chen',
-      avatar: 'https://i.pravatar.cc/150?img=12',
-      bio: 'Software developer living and working remotely from Nairobi since 2023',
-      role: 'Digital Nomad',
-    },
-    tags: ['Digital Nomad', 'Nairobi', 'Remote Work', 'Coworking'],
-    relatedProperties: ['2', '7'], // Nairobi Sky Loft, Kilimani Executive
-    publishedAt: '2026-01-20T10:00:00Z',
-    readTime: 15,
-    views: 3421,
-    featured: true,
+    id: 'faq-5',
+    question: 'Are the WiFi speeds accurate?',
+    answer: 'Absolutely! We test WiFi speeds at every property before listing. All listed speeds are actual tested download speeds. We understand how important reliable internet is, especially for remote workers and content creators. If you experience speeds significantly lower than advertised, we\'ll work to resolve it immediately or help you relocate to another property.',
+    category: 'wifi',
+    order: 1,
+  },
+  {
+    id: 'faq-6',
+    question: 'How are properties verified?',
+    answer: 'Every property undergoes our rigorous 50-point verification process before listing. We personally visit each property to check: WiFi speeds, cleanliness standards, safety features, amenities accuracy, neighborhood safety, and host responsiveness. We also collect guest feedback continuously to ensure standards remain high. Only properties meeting our criteria receive the "Safari Stays Verified" badge.',
+    category: 'properties',
+    order: 2,
+  },
+  {
+    id: 'faq-7',
+    question: 'What\'s included in the nightly rate?',
+    answer: 'The nightly rate includes accommodation and utilities (electricity, water, WiFi). Some properties also include cleaning, linens, and toiletries – check the specific property listing. Meals, airport transfers, and activities are typically additional unless stated otherwise. All fees (cleaning fee, service charge) are shown separately before you book so there are no surprises.',
+    category: 'booking',
+    order: 5,
+  },
+  {
+    id: 'faq-8',
+    question: 'Is there 24/7 support?',
+    answer: 'Yes! Our WhatsApp support team is available 24/7 for urgent issues (lockouts, emergencies, etc.). For general questions, we respond within 1-2 hours during business hours (8am-10pm EAT). Each property also has a local contact for immediate on-site assistance.',
+    category: 'general',
+    order: 1,
   },
 
+  // SAFETY & SECURITY
   {
-    id: 'post-3',
-    slug: 'best-time-visit-kenya',
-    title: 'When is the Best Time to Visit Kenya? A Month-by-Month Guide',
-    excerpt: 'Kenya is a year-round destination, but timing your visit right can make all the difference. Here\'s what to expect each month.',
-    content: `
-# When is the Best Time to Visit Kenya?
-
-Kenya is blessed with diverse microclimates and year-round wildlife viewing, but each season offers unique experiences. Here's your month-by-month guide.
-
-## January - February: Peak Dry Season
-
-**Weather:** Hot and dry (25-32°C)
-**Wildlife:** Excellent game viewing as animals congregate at water sources
-**Perfect For:** Safari enthusiasts, beach lovers
-**Avoid If:** You dislike heat
-
-**Highlights:**
-- Baby animals everywhere (calving season)
-- Clear skies for photography
-- Perfect beach weather
-- Fewer tourists than July-August
-
-## March - May: Long Rains
-
-**Weather:** Wet season (occasional afternoon showers)
-**Wildlife:** Still good, but harder to spot in lush vegetation
-**Perfect For:** Budget travelers, photographers (dramatic skies)
-**Avoid If:** You want guaranteed sunny days
-
-**Highlights:**
-- Lowest prices of the year
-- Lush, green landscapes
-- Great for bird watching
-- Fewer crowds
-
-## June: Shoulder Season
-
-**Weather:** Dry and pleasant (20-27°C)
-**Wildlife:** Good viewing, migration starting
-**Perfect For:** Value seekers, all activities
-**Avoid If:** N/A - Great all-around month
-
-**Highlights:**
-- Rates between low and peak season
-- Pleasant temperatures
-- Migration beginning in Mara
-
-## July - October: Peak Safari Season
-
-**Weather:** Dry and mild (18-28°C)
-**Wildlife:** Spectacular (Great Migration peaks)
-**Perfect For:** Wildlife enthusiasts, first-time visitors
-**Avoid If:** You want to avoid crowds and high prices
-
-**Highlights:**
-- Great Migration river crossings
-- Excellent game viewing
-- Minimal rain
-- Perfect conditions for all activities
-
-## November - December: Short Rains
-
-**Weather:** Short afternoon showers
-**Wildlife:** Excellent (post-rain freshness)
-**Perfect For:** All-around travel
-**Avoid If:** December 20-Jan 5 (expensive and busy)
-
-**Highlights:**
-- Beautiful landscapes
-- Good prices (except Christmas)
-- Migratory birds arrive
-- Festive atmosphere in December
-
-## Regional Variations
-
-### Coast (Mombasa, Diani, Lamu)
-- Best: December-March, July-October
-- Avoid: April-June (heavy rains)
-- Water sports peak: July-March (consistent winds)
-
-### Mountains (Mount Kenya, Aberdares)
-- Best: January-February, July-October
-- Avoid: March-May (wet and cloudy)
-- Coldest: July-August (bring warm clothes)
-
-### LaKsh (Naivasha, Nakuru)
-- Year-round destination
-- Best bird watching: November-April
-- Avoid: April (roads can be muddy)
-
-## Safari Considerations by Season
-
-**Dry Season (June-October, January-February):**
-- Pros: Easy wildlife spotting, better roads
-- Cons: More expensive, more tourists
-- Best for: First-time safari-goers
-
-**Wet Season (March-May, November-December):**
-- Pros: Lush scenery, dramatic skies, lower prices
-- Cons: Some roads impassable, mosquitoes more prevalent
-- Best for: Photographers, return visitors
-
-## Our Recommendations
-
-**Best Overall Time:** June-July or January
-- Good weather + Lower prices than peak + Good wildlife
-
-**Budget Travel:** April-May
-- Lowest prices, green landscapes, fewer crowds
-
-**Ultimate Safari:** August-September
-- Peak Migration, best wildlife viewing (if price is no object)
-
-**Beach Holiday:** January-February
-- Perfect weather, calm seas, less humid
-
-**Avoiding Crowds:** March, November
-- Good weather, lower prices, authentic experience
-
-## Booking Advice
-
-- **Peak Season (July-Oct):** Book 6-12 months ahead
-- **Shoulder Season (Jun, Nov):** Book 3-6 months ahead
-- **Low Season (Mar-May):** Can book last minute for best deals
-
-Remember, Kenya is magnificent year-round. The "best" time depends on your priorities: Wildlife? Savings? Weather? Crowds? Choose accordingly!
-    `,
-    coverImage: {
-      url: 'https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?auto=format&fit=crop&w=1200',
-      alt: 'Kenya Seasons',
-      type: 'hero',
-    },
-    category: blogCategories[4], // Travel Tips
-    author: {
-      name: 'Sarah Kimani',
-      avatar: 'https://i.pravatar.cc/150?img=47',
-      bio: 'Wildlife photographer and safari guide with 10+ years in the Mara',
-      role: 'Safari Expert',
-    },
-    tags: ['Travel Planning', 'Best Time to Visit', 'Weather', 'Seasons'],
-    publishedAt: '2026-01-10T08:00:00Z',
-    readTime: 10,
-    views: 4123,
-    featured: true,
+    id: 'faq-9',
+    question: 'Are the properties safe?',
+    answer: 'Safety is our top priority. All urban properties have 24/7 security (guards, CCTV, or gated compounds). Safari properties follow strict wildlife safety protocols. We also verify: working locks, fire safety equipment, first aid kits, emergency contact procedures, and secure parking where applicable. We provide detailed safety information for each property before your arrival.',
+    category: 'safety',
+    order: 1,
+  },
+  {
+    id: 'faq-10',
+    question: 'What if I have an emergency during my stay?',
+    answer: 'Contact us immediately via WhatsApp – we have 24/7 emergency support. Each property listing also includes local emergency numbers (police, ambulance, hospital). For medical emergencies, we can arrange transport to the nearest hospital. For property issues, we\'ll send someone to help within 30-60 minutes in urban areas. Your safety and comfort are our priority.',
+    category: 'safety',
+    order: 2,
   },
 
+  // TRAVEL & LOGISTICS
   {
-    id: 'post-4',
-    slug: 'kenya-packing-list-safari',
-    title: 'The Ultimate Kenya Safari Packing List',
-    excerpt: 'Don\'t over-pack or forget essentials. Here\'s exactly what to bring for your Kenyan adventure, from clothing to photography gear.',
-    content: `
-# The Ultimate Kenya Safari Packing List
-
-After guiding hundreds of safaris, here's my definitive packing list. Print this out and check off items as you pack!
-
-## Clothing Essentials
-
-### What to Wear on Safari
-- **Neutral colors:** Khaki, olive, brown, beige (avoid bright colors and white)
-- **Long-sleeve shirts:** Sun protection + mosquito barrier
-- **Lightweight pants:** Convertible hiking pants ideal
-- **Warm fleece/jacket:** Morning drives can be 10°C!
-- **Wide-brimmed hat:** Essential for sun protection
-- **Comfortable walking shoes:** Closed-toe for game walks
-- **Sandals:** For lodge/camp evenings
-
-### Beach Addition
-- Swimwear
-- Light beach cover-ups
-- Flip-flops
-
-## Photography Gear
-
-### Essential
-- **Camera body** (DSLR or mirrorless recommended)
-- **Zoom lens:** 100-400mm minimum (wildlife is distant!)
-- **Extra memory cards:** 64GB+ (RAW files are huge)
-- **Extra batteries:** Charging limited in camps
-- **Lens cleaning kit:** Dust is everywhere
-- **Binoculars:** 8x42 or 10x42 ideal
-- **Phone with good camera:** Backup + convenience
-
-### Optional but Recommended
-- **Gimbal/stabilizer:** For vehicle vibrations
-- **Dry bag:** Dust protection
-- **Portable hard drive:** Backup your photos
-
-## Health & Toiletries
-
-### Medical
-- **Malaria prophylaxis:** Consult your doctor 4-6 weeks before
-- **Prescription medications:** Bring extra + copy of prescriptions
-- **Basic first aid kit:** Band-aids, antiseptic, pain relievers
-- **Anti-diarrheal medication:** Just in case
-- **Hand sanitizer:** Essential
-- **Face masks:** For dusty roads
-
-### Sun Protection
-- **High SPF sunscreen:** 50+ recommended
-- **Lip balm with SPF**
-- **After-sun lotion**
-- **Sunglasses:** UV protection essential
-
-### Insect Protection
-- **DEET insect repellent:** 30%+ concentration
-- **Permethrin spray:** Treat clothes before trip
-- **Anti-itch cream**
-
-## Documents & Money
-
-### Essential Documents
-- **Passport:** Valid 6+ months beyond travel
-- **Visa:** Apply for e-Visa before arrival
-- **Travel insurance:** Comprehensive coverage
-- **Vaccination certificate:** Yellow fever if coming from endemic country
-- **Copies of everything:** Keep digital + physical copies
-
-### Money Matters
-- **Cash:** USD for tips, small expenses
-- **Credit cards:** Visa/Mastercard widely accepted
-- **Notify your bank:** Avoid card blocks
-
-## Electronics
-
-- **Phone + charger**
-- **Power bank:** 20,000mAh+ recommended
-- **Universal adapter:** UK-style plugs in Kenya
-- **Headlamp/flashlight:** Essential for camps
-- **E-reader/tablet:** For safari downtime
-
-## Accessories
-
-- **Daypack:** 20-30L for day trips
-- **Reusable water bottle:** Camelbak or Nalgene
-- **Dry bag:** Protect valuables from dust
-- **Ziploc bags:** Multiple uses
-- **Travel towel:** Quick-dry microfiber
-- **Buff/neck gaiter:** Dust protection
-
-## Don't Forget
-
-- **Downloaded offline maps**
-- **Guidebooks:** Kenya field guides (birds, mammals)
-- **Notebook & pen:** Safari journal
-- **Snacks:** Nuts, protein bars for game drives
-
-## What NOT to Pack
-
-- **Camo clothing:** Illegal in Kenya!
-- **Drones:** Require permits (rarely granted in parks)
-- **Too much:** Luggage limits often 15kg for bush flights
-
-## Packing Tips
-
-1. **Use packing cubes:** Organization is key
-2. **Wear bulkiest items on plane:** Save luggage space
-3. **Roll clothes:** More space, fewer wrinkles
-4. **Pack essentials in carry-on:** In case luggage delays
-5. **Leave room:** For souvenirs!
-
-## Weather-Specific Additions
-
-### Dry Season (June-Oct, Jan-Feb)
-- Extra dust protection for electronics
-- Warmer layers (mornings cold)
-
-### Wet Season (Mar-May, Nov-Dec)
-- Light rain jacket
-- Waterproof bag covers
-- Quick-dry clothing
-
-## Final Checklist Before You Go
-
-- [ ] Passport & visa
-- [ ] Travel insurance
-- [ ] Malaria medication started
-- [ ] Bank notified of travel
-- [ ] Copies of important documents (cloud + physical)
-- [ ] Accommodations booked & confirmed
-- [ ] Yellow fever certificate (if required)
-- [ ] E-SIM or local SIM plan researched
-- [ ] Emergency contacts saved
-- [ ] Travel adapter tested
-
-Happy packing! Remember: you're going to have an incredible time regardless of what you forget. Essentials can be bought in Nairobi if needed!
-    `,
-    coverImage: {
-      url: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200',
-      alt: 'Travel Packing',
-      type: 'hero',
-    },
-    category: blogCategories[4], // Travel Tips
-    author: {
-      name: 'James Mwangi',
-      avatar: 'https://i.pravatar.cc/150?img=33',
-      bio: 'Safari guide and travel blogger helping visitors make the most of Kenya',
-      role: 'Travel Guide',
-    },
-    tags: ['Packing List', 'Safari Tips', 'Travel Preparation'],
-    publishedAt: '2026-01-05T09:00:00Z',
-    readTime: 8,
-    views: 2956,
-    featured: false,
+    id: 'faq-11',
+    question: 'Do I need a visa to visit Kenya?',
+    answer: 'Most visitors need a visa. US, UK, EU, and many other nationalities can apply for an e-Visa online before travel ($50 USD for 90-day single entry). Application takes 2-7 days. Some nationalities get visa-on-arrival. Check Kenya\'s immigration website or contact us for guidance specific to your nationality. We can help with the application process if needed!',
+    category: 'general',
+    order: 2,
+  },
+  {
+    id: 'faq-12',
+    question: 'Can you arrange airport transfers?',
+    answer: 'Yes! We can arrange safe, reliable airport pickups to any of our properties. Cost varies by distance: Nairobi (JKIA) pickups typically KES 2,000-3,500. Mombasa (MBA) pickups to Diani around KES 4,000-6,000. Just let us know your flight details when booking, and we\'ll have a driver waiting with a name sign at arrivals.',
+    category: 'general',
+    order: 3,
+  },
+  {
+    id: 'faq-13',
+    question: 'What about travel insurance?',
+    answer: 'We strongly recommend comprehensive travel insurance covering medical emergencies, trip cancellations, and lost luggage. Kenya has excellent private hospitals but they require payment upfront or insurance proof. Popular providers: World Nomads, SafetyWing, Allianz. Make sure your policy covers safari activities if you\'re planning game drives.',
+    category: 'general',
+    order: 4,
   },
 
+  // SPECIFIC CONCERNS
   {
-    id: 'post-5',
-    slug: 'swahili-culture-coast',
-    title: 'Understanding Swahili Culture on the Kenyan Coast',
-    excerpt: 'The Kenyan coast has a rich cultural heritage spanning centuries of trade, tradition, and Islamic influence. Here\'s what you should know.',
-    content: `
-# Understanding Swahili Culture on the Kenyan Coast
-
-The Kenyan coast is where Africa meets Arabia and India, creating a unique Swahili culture that has thrived for over a thousand years. Understanding this rich heritage will deepen your coastal experience.
-
-## What is Swahili Culture?
-
-Swahili (from the Arabic "sahel" meaning coast) represents a blend of African, Arab, Persian, Indian, and later European influences. It's not just an ethnicity but a coastal way of life.
-
-## Key Elements of Swahili Culture
-
-### Language
-- **KiSwahili** is the primary language
-- Rich in Arabic loan words
-- Proverbs and poetry highly valued
-- English widely spoken in tourist areas
-
-### Religion
-- **Predominantly Islamic** (Sunni majority)
-- Churches and Hindu temples also present
-- Five daily prayers (call to prayer audible everywhere)
-- Ramadan observance important
-- Friday is the holy day
-
-### Architecture
-- **Lamu Old Town:** Best-preserved Swahili settlement
-- Coral stone buildings
-- Intricate carved wooden doors (status symbols)
-- Inner courtyards for privacy
-- Rooftop terraces (baraza)
-
-### Dress
-**Traditional:**
-- Men: White kanzus (long robes), kofia (caps)
-- Women: Colorful kangas and buibuis (veils)
-- Modern dress common, especially in Mombasa
-
-**Visitors Should:**
-- Dress modestly, especially in Old Towns
-- Cover shoulders and knees
-- Women: consider carrying a scarf
-- Swimwear only on beach, not streets
-
-### Food Culture
-**Staple Dishes:**
-- **Biryani:** Spiced rice with meat
-- **Pilau:** Fragrant rice dish
-- **Samaki wa kupaka:** Fish in coconut sauce
-- **Urojo:** Tangy soup from Zanzibar
-- **Mkate wa ufuta:** Sesame seed bread
-- **Mahamri:** Sweet fried bread
-- **Fresh seafood:** Lobster, prawns, octopus
-
-**Drinks:**
-- **Kahawa:** Strong, spiced coffee
-- **Madafu:** Fresh coconut water
-- **Tamarind juice**
-
-### Music & Dance
-- **Taarab:** Poetry set to music (Arab influence)
-- **Chakacha:** Coastal dance
-- **Bwiti:** Traditional drums
-- Musical events common during celebrations
-
-## Swahili Customs & Etiquette
-
-### Greetings
-- HandshaKsh common (right hand only)
-- "Jambo" (hello) or "Habari" (how are you?)
-- Take time for greetings; rushing is rude
-- Show respect to elders
-
-### Hospitality
-- Guests are sacred in Swahili culture
-- Expect warm welcomes
-- Remove shoes when entering homes
-- Accept offered tea/coffee (refusing is impolite)
-
-### Social Norms
-- Public displays of affection minimal
-- Left hand considered unclean (eat with right)
-- Photography: always ask permission
-- Friday afternoons: many shops closed for prayers
-- During Ramadan: don't eat/drink publicly during daytime
-
-## Historical Context
-
-### Trading Heritage
-- 1st-century trade with Arabia
-- 8th-century Arab settlements
-- 15th-century Portuguese arrival
-- 19th-century Omani influence
-- British colonial period
-- Independence in 1963
-
-### Key Historical Sites
-- **Fort Jesus (Mombasa):** Portuguese fort built 1593
-- **Lamu Old Town:** 700 years of Swahili life
-- **Gede Ruins:** 13th-century Swahili town
-- **Vasco da Gama Pillar (Malindi):** Portuguese monument
-
-## Festivals & Celebrations
-
-### Religious
-- **Eid al-Fitr:** End of Ramadan (dates vary)
-- **Eid al-Adha:** Festival of sacrifice
-- **Maulidi:** Prophet's birthday celebration (especially Lamu)
-
-### Cultural
-- **Lamu Cultural Festival:** August
-- **Mombasa Carnival:** November
-- **Malindi Festival:** December
-
-## Shopping & Crafts
-
-### Traditional Crafts
-- **Carved doors:** Intricate designs
-- **Kangas:** Colorful printed cloth
-- **Kikois:** Traditional sarongs
-- **Silver jewelry:** Arab-influenced designs
-- **Dhow models:** Hand-carved boats
-- **Spices:** Cloves, cardamom, cinnamon
-
-### Best Markets
-- Old Town Market (Mombasa)
-- Lamu Waterfront
-- Malindi Market
-
-## Dos and Don'ts
-
-### Do:
-- Dress modestly in towns
-- Learn basic Swahili phrases
-- Respect prayer times
-- Bargain politely in markets
-- Try local food
-- Show interest in culture
-- Remove shoes in homes/mosques
-
-### Don't:
-- Wear beach clothes in town
-- Photograph people without permission
-- Enter mosques unless invited (and dress appropriately)
-- Show disrespect during prayer times
-- Eat with left hand
-- Public drinking (many Muslims don't drink alcohol)
-
-## Responsible Tourism
-
-- Support local businesses
-- Learn about history before visiting sites
-- Respect religious practices
-- Don't participate in begging culture
-- Be mindful of photography
-- Ask questions respectfully
-
-## Language Tips
-
-**Essential Swahili Phrases:**
-- Jambo - Hello
-- Habari - How are you?
-- Asante (sana) - Thank you (very much)
-- Tafadhali - Please
-- Ndiyo/Hapana - Yes/No
-- Pole pole - Slowly (very common saying!)
-- Hakuna matata - No worries
-- Karibu - Welcome
-
-## Final Thoughts
-
-Swahili culture is warm, welcoming, and deeply rooted in hospitality. Show respect, be curious, and you'll be rewarded with genuine connections and unforgettable experiences.
-
-The coast isn't just about beaches – it's about people, history, and a way of life that has thrived for centuries. Take time to understand it, and your visit will be infinitely richer.
-
-*Karibu Kenya!* (Welcome to Kenya!)
-    `,
-    coverImage: {
-      url: 'https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=1200',
-      alt: 'Swahili Architecture Lamu',
-      type: 'hero',
-    },
-    category: blogCategories[2], // Local Culture
-    author: {
-      name: 'Amina Hassan',
-      avatar: 'https://i.pravatar.cc/150?img=45',
-      bio: 'Lamu native and cultural heritage advocate sharing coastal traditions',
-      role: 'Cultural Guide',
-    },
-    tags: ['Swahili Culture', 'Coastal Kenya', 'Lamu', 'Cultural Heritage'],
-    relatedProperties: ['5', '13'], // Lamu Swahili House, Mombasa Old Town Riad
-    publishedAt: '2025-12-28T10:00:00Z',
-    readTime: 14,
-    views: 1876,
-    featured: false,
+    id: 'faq-14',
+    question: 'Is tap water safe to drink?',
+    answer: 'In Nairobi and major cities, tap water is generally treated but we recommend bottled water to be safe. Most properties provide complimentary bottled water. In safari areas, properties have filtered or bottled water. Always use bottled or filtered water for drinking. Tap water is fine for showering and brushing teeth.',
+    category: 'general',
+    order: 5,
+  },
+  {
+    id: 'faq-15',
+    question: 'What about malaria precautions?',
+    answer: 'Malaria risk varies by region: Low risk in Nairobi (high altitude). Moderate risk at the coast and Lake Victoria. Higher risk in safari areas. Consult your doctor 4-6 weeks before travel about antimalarial medication. We recommend: Mosquito repellent (DEET 30%+), Long sleeves at dawn/dusk, Sleeping under bed nets (provided at safari properties), Window screens (all our properties have them). Most importantly, take antimalarial medication if prescribed.',
+    category: 'safety',
+    order: 3,
+  },
+  {
+    id: 'faq-16',
+    question: 'Can I work remotely from the properties?',
+    answer: 'Absolutely! Many of our guests are digital nomads. All properties list accurate WiFi speeds. Properties marked "Creator-Friendly" or "Work Retreat" have dedicated workspaces, good lighting, and backup power. Nairobi properties typically have the fastest internet (150-250Mbps). Even safari properties now offer reliable Starlink connections (50-150Mbps). Let us know your requirements, and we\'ll match you with the perfect property.',
+    category: 'wifi',
+    order: 2,
+  },
+  {
+    id: 'faq-17',
+    question: 'Are pets allowed?',
+    answer: 'Pet policies vary by property. Some properties welcome pets (usually with an additional cleaning fee). Safari properties typically don\'t allow pets due to wildlife. Filter for "Pet-Friendly" properties or ask us via WhatsApp – we\'ll find suitable options if you\'re traveling with your furry friend.',
+    category: 'properties',
+    order: 3,
+  },
+  {
+    id: 'faq-18',
+    question: 'What\'s the best time to visit Kenya?',
+    answer: 'Kenya is great year-round, but timing depends on your priorities: Great Migration (Maasai Mara): July-October, Best weather overall: January-February and June-October, Budget travelers: March-May (lower prices, occasional rain), Beach season: December-March (hot & dry), Bird watching: November-April (migratory birds). We can help you choose the best time based on your interests and budget!',
+    category: 'general',
+    order: 6,
   },
 ];
