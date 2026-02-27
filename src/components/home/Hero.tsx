@@ -35,12 +35,12 @@ export default function Hero() {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl w-full">
+      <div className="relative z-10 text-center lg:mt-18 px-4 sm:px-6 max-w-4xl w-full">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="text-white/90 text-[clamp(2.5rem,8vw,5rem)] font-instrument-serif leading-relaxed mb-4 sm:mb-6"
+          className="text-white/90 text-[clamp(2.5rem,8vw,5rem)] font-instrument-serif leading-normal lg:mt-6 lg:pt-12 mb-4 sm:mb-6"
         >
           Travel and Experience Kenya, <br /> Authentically
         </motion.h1>
@@ -49,19 +49,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-white lg:not-only:text-xl flex flex-col gap-4 sm:text-lg md:text-xl font-medium mt-12 mb-8 sm:mb-12 max-w-6xl mx-auto px-4"
+          className="text-white lg:not-only:text-xl flex flex-col gap-4 sm:text-lg md:text-xl font-medium my-6 sm:mb-12 max-w-6xl mx-auto px-4"
         >
-          Curated stays. Local expertise. Book via WhatsApp.
-          <span className="text-white/80 text-base font-light mt-4 mb-6 sm-mb-10 max-w-4xl mx-auto px-4">
             Experience the magic of Kenya with luxury accommodations, unforgettable excursions, and unique ocean adventures.
-          </span>
+          {/* <span className="text-white/80 text-base font-light mt-4 mb-6 sm-mb-10 max-w-4xl mx-auto px-4">
+            Experience the magic of Kenya with luxury accommodations, unforgettable excursions, and unique ocean adventures.
+          </span> */}
 
         </motion.p>
 
         {/* Search Bar */}
         <motion.div
           variants={itemVars}
-          className="flex flex-col md:flex-row justify-center items-center gap-2 max-w-4xl mx-auto"
+          className="flex flex-col md:flex-row justify-center items-center gap-2 mb-12 max-w-4xl mx-auto"
         >
           {/* Stay Button */}
           <Link
