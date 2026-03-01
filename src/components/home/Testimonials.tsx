@@ -31,8 +31,11 @@ export default function Testimonials() {
     <section className="py-24 bg-[#FDFBF7]">
       <div className="max-w-360 mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-instrument-serif">
-            What Our Clients Say
+          <span className="uppercase text-[#C5A059] text-sm font-medium mb-4">
+            Client Reviews
+          </span>
+          <h2 className="text-4xl font-instrument-serif mt-4">
+            What Our Guests Say
           </h2>
         </div>
 
@@ -46,11 +49,10 @@ export default function Testimonials() {
               className={`flex ${review.isBusiness ? "justify-end" : "justify-start"}`}
             >
               <div
-                className={`max-w-[80%] rounded-2xl p-6 shadow-sm relative ${
-                  review.isBusiness
+                className={`max-w-[80%] rounded-2xl p-6 shadow-sm relative ${review.isBusiness
                     ? "bg-[#2D4032] text-white rounded-tr-none"
                     : "bg-white text-[#1A1A1A] rounded-tl-none border border-[#E8E3DB]"
-                }`}
+                  }`}
               >
                 {!review.isBusiness && (
                   <div className="flex items-center space-x-3 mb-3">
@@ -77,11 +79,10 @@ export default function Testimonials() {
                 )}
                 <p className="text-sm leading-relaxed">{review.text}</p>
                 <div
-                  className={`absolute top-0 ${review.isBusiness ? "-right-2" : "-left-2"} w-0 h-0 border-8 border-transparent ${
-                    review.isBusiness
+                  className={`absolute top-0 ${review.isBusiness ? "-right-2" : "-left-2"} w-0 h-0 border-8 border-transparent ${review.isBusiness
                       ? "border-l-[#2D4032] border-t-[#2D4032]"
                       : "border-r-white border-t-white"
-                  }`}
+                    }`}
                 />
               </div>
             </motion.div>

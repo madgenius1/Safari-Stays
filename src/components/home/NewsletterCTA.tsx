@@ -16,7 +16,7 @@ export default function NewsletterCTA() {
             className="absolute inset-0 opacity-20 bg-cover bg-center"
             style={{
               backgroundImage:
-                "url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=1200')",
+                "url('https://images.unsplash.com/photo-1516426122078-c23e76319801?auto=format&fit=crop&w=1920')",
             }}
           />
 
@@ -32,7 +32,7 @@ export default function NewsletterCTA() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
               <Link
-                href="https://wa.me/254700000000?text=Hi! I need help planning my Kenya journey."
+                href="https://wa.me/254759711145?text=Hi! I need help planning my Kenya journey."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full sm:w-auto bg-[#C5A059] text-white px-8 sm:px-10 py-4 rounded-full font-bold text-base sm:text-lg hover:bg-[#b08e4d] transition-colors shadow-xl shadow-black/20 text-center"
