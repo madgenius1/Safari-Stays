@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { vibes } from "../../lib/mockData";
 import { motion } from "motion/react";
 
@@ -16,8 +17,8 @@ export default function VibeSelector() {
               Find Your Vibe. <br /> Find Your Tribe.
             </h2>
           </div>
-          <p className="text-[#1A1A1A]/80 ">
-            Whether you are looking for city lights, savannah sunsets, or white sandy beaches, we hve
+          <p className="text-[#1A1A1A]/90 max-w-4xl px-4">
+            Whether you are looking for city lights, savannah sunsets, or white sandy beaches, we have
             curated the perfect spots for your experience.
           </p>
         </div>
@@ -38,13 +39,16 @@ export default function VibeSelector() {
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-6">
+              <div className="absolute bottom-6 left-6 flex flex-col gap-2">
                 <h3 className="text-white text-2xl font-instrument-serif">
                   {vibe.label}
                 </h3>
-                <span className="text-white/70 text-sm">
-                  Explore Activity →
+                <span className="text-xs text-white/90 max-w-4xl pr-2">
+                  {vibe.description}
                 </span>
+                <Link href={vibe.id} className="text-white/70 text-sm">
+                  Explore Activity →
+                </Link>
               </div>
             </motion.div>
           ))}

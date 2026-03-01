@@ -47,7 +47,7 @@ export default function FeaturedProperties() {
                 </div>
               </div>
 
-              <div className="space-y-2 border-b mb-4">
+              <div className="space-y-2 mb-4">
                 <div className="flex items-center text-[#1A1A1A]/60 text-xs font-bold uppercase tracking-widest">
                   <MapPin size={12} className="mr-1 text-[#C5A059]" />
                   {property.location.area}
@@ -61,6 +61,7 @@ export default function FeaturedProperties() {
                   </span>
                   <span className="text-[#1A1A1A]/40 text-sm">/ night</span>
                 </div>
+                <hr />
               </div>
             </motion.a>
           ))}

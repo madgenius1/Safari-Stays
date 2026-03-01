@@ -44,7 +44,7 @@ export default function Navbar() {
             alt="Zanari Logo"
             width={120}
             height={80}
-            className="rounded-sm"
+            className="rounded-sm brightness-110"
           />
         </Link>
 
