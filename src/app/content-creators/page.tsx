@@ -4,6 +4,7 @@ import { Camera, Wifi, Sun, Zap, MapPin, CheckCircle } from "lucide-react";
 import { motion } from "motion/react";
 import { properties } from "../../lib/mockData";
 import { formatKES } from "../../utils/formatting";
+import Link from "next/link";
 
 const creatorFeatures = [
   {
@@ -88,20 +89,20 @@ export default function ContentCreatorsPage() {
                 stay is creator-tested.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
+                <Link
                   href="/stays"
                   className="inline-block bg-[#C5A059] text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b08e4d] transition-colors shadow-xl shadow-[#C5A059]/20 text-center"
                 >
                   Browse Creator Stays
-                </a>
-                <a
+                </Link>
+                <Link
                   href="https://wa.me/254700000000?text=Hi! I'm a content creator looking for the perfect Kenya stay."
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block border border-[#2D4032] text-[#2D4032] px-8 py-4 rounded-full font-bold text-lg hover:bg-[#2D4032] hover:text-white transition-colors text-center"
                 >
-                  Chat with Concierge
-                </a>
+                  Chat with Us
+                </Link>
               </div>
             </motion.div>
 
@@ -140,12 +141,12 @@ export default function ContentCreatorsPage() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-instrument-serif text-[#1A1A1A] mb-4">
               Everything a Creator Needs
             </h2>
-            <p className="text-lg sm:text-xl text-[#1A1A1A]/60 max-w-2xl mx-auto">
-              We've obsessed over the details so you can focus on creating.
+            <p className="text-lg sm:text-xl text-[#1A1A1A]/60 mx-auto">
+              We&apos;ve obsessed over the details so you can focus on creating.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 sm:gap-8">
             {creatorFeatures.map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -222,7 +223,7 @@ export default function ContentCreatorsPage() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-instrument-serif text-[#1A1A1A] mb-4">
               Creator-Verified Stays
             </h2>
-            <p className="text-lg sm:text-xl text-[#1A1A1A]/60 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#1A1A1A]/60 mx-auto">
               Every property below has been tested for WiFi speed, lighting
               quality, and content-friendly aesthetics.
             </p>

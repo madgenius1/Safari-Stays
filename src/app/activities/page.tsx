@@ -45,7 +45,7 @@ export default function ActivitiesPage() {
             alt="Kenya Coast Activities"
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-linear-to-b from-black/60 via-black/40 to-safari-bone" />
+          <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black/50 to-safari-bone" />
         </div>
 
         <div className="relative z-10 max-w-360 mx-auto px-6 text-center">
@@ -55,9 +55,9 @@ export default function ActivitiesPage() {
             transition={{ duration: 0.8 }}
           >
             <h1 className="text-5xl md:text-7xl font-instrument-serif text-white mb-6">
-              Coastal Kenya Activities
+            Kenyan Thrilling Activities
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto font-instrument-serif italic mb-8">
+            <p className="text-xl md:text-2xl text-white/90 max-w-4xl mx-auto font-instrument-serif italic mb-8">
               From adrenaline-pumping water sports to stunning beach photoshoots
             </p>
             <div className="flex flex-wrap justify-center gap-4 text-white/80 text-sm">
@@ -67,7 +67,7 @@ export default function ActivitiesPage() {
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-safari-gold rounded-full" />
-                <span>3 Coastal Regions</span>
+                <span>Varied Kenyan Regions</span>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-safari-gold rounded-full" />
@@ -77,9 +77,9 @@ export default function ActivitiesPage() {
           </motion.div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+        {/* <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
           <ChevronDown size={32} className="text-white" />
-        </div>
+        </div> */}
       </div>
 
       <div className="max-w-360 mx-auto px-6 py-16">

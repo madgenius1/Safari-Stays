@@ -1,7 +1,8 @@
 "use client";
 
+import { use } from "react";
+import Link from "next/link";
 import { destinations, getPropertiesByDestination } from "../../../lib/mockData";
-import { motion } from "motion/react";
 import {
   MapPin,
   ArrowLeft,
@@ -12,8 +13,16 @@ import {
 } from "lucide-react";
 import PropertyCard from "../../../components/stays/PropertyCard";
 
-export default function DestinationDetailPage({ params }: { params: { slug: string } }) {
-  const destination = destinations.find((d) => d.slug === params.slug);
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+export default function DestinationDetailPage({ params }: PageProps) {
+  const resolvedParams = use(params);
+  const slug = resolvedParams?.slug;
+  const destination = destinations.find((d) => d.slug === slug);
 
   if (!destination) {
     return (
@@ -22,9 +31,9 @@ export default function DestinationDetailPage({ params }: { params: { slug: stri
           <h1 className="text-4xl font-instrument-serif mb-4">
             Destination Not Found
           </h1>
-          <a href="/destinations" className="text-[#C5A059] font-bold">
+          <Link href="/destinations" className="text-[#C5A059] font-bold">
             Back to All Destinations
-          </a>
+          </Link>
         </div>
       </div>
     );
@@ -290,10 +299,10 @@ export default function DestinationDetailPage({ params }: { params: { slug: stri
 
         {/* Bottom CTA */}
         <div className="text-center bg-[#2D4032] text-white rounded-3xl p-12">
-          <h3 className="text-4xl font-instrument-serif mb-4">
+          <h3 className="text-4xl font-instrument-serif text-white mb-4">
             Ready to Explore {destination.name}?
           </h3>
-          <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 text-white/80  mx-auto">
             Let our local experts help you find the perfect accommodation and
             create unforgettable experiences.
           </p>

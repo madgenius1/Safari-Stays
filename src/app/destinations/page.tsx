@@ -6,6 +6,7 @@ import { useState } from "react";
 import { destinations } from "../../lib/mockData";
 import { motion } from "motion/react";
 import { MapPin, ArrowRight, Plane } from "lucide-react";
+import Link from "next/link";
 
 export default function DestinationsPage() {
   const [activeFilter, setActiveFilter] = useState<"all" | "featured">("all");
@@ -23,12 +24,12 @@ export default function DestinationsPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center max-w-5xl mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-instrument-serif text-[#1A1A1A] mb-6">
               Discover Kenya
             </h1>
-            <p className="text-xl text-[#1A1A1A]/70 leading-relaxed font-instrument-serif italic mb-8">
+            <p className="text-xl text-[#1A1A1A]/80 leading-relaxed font-instrument-serif mb-8">
               From pristine beaches to endless savannahs, historic coastal towns
               to modern cities. Each destination offers its own unique magic.
             </p>
@@ -143,14 +144,14 @@ export default function DestinationsPage() {
           transition={{ delay: 0.5 }}
           className="mt-24 text-center bg-[#2D4032] text-white rounded-3xl p-12"
         >
-          <h3 className="text-4xl font-instrument-serif mb-4">
+          <h3 className="text-4xl text-white font-instrument-serif mb-4">
             Need Help Planning?
           </h3>
-          <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 text-white/80 mx-auto">
             Our local experts can help you choose the perfect destinations and
             create a custom itinerary for your Kenya adventure.
           </p>
-          <a
+          <Link
             href="https://wa.me/254700000000?text=Hi! I need help planning my Kenya itinerary."
             target="_blank"
             rel="noopener noreferrer"
@@ -158,7 +159,7 @@ export default function DestinationsPage() {
           >
             <span>Chat with a Travel Expert</span>
             <ArrowRight size={20} />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </div>

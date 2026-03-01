@@ -1,7 +1,7 @@
 "use client";
 
 import { experiences } from "../../../lib/mockData";
-import { motion } from "motion/react";
+import { use } from "react";
 import {
   ArrowLeft,
   Clock,
@@ -15,8 +15,16 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-export default function ExperienceDetailPage({ params }: { params: { slug: string } }) {
-  const experience = experiences.find((e) => e.slug === params.slug);
+interface PageProps {
+  params: Promise<{
+    slug: string;
+  }>;
+}
+
+export default function ExperienceDetailPage({ params }: PageProps) {
+   const resolvedParams = use(params);
+    const slug = resolvedParams?.slug;
+  const experience = experiences.find((e) => e.slug === slug);
 
   if (!experience) {
     return (
@@ -60,8 +68,8 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
               </span>
             </div>
 
-            <h1 className="text-5xl md:text-6xl font-instrument-serif mb-4">{experience.title}</h1>
-            <p className="text-xl italic font-instrument-serif text-white/90 mb-6">{experience.tagline}</p>
+            <h1 className="text-5xl md:text-6xl font-instrument-serif text-white/90 mb-4">{experience.title}</h1>
+            <p className="text-xl  font-instrument-serif text-white/70 mb-6">{experience.tagline}</p>
 
             <div className="flex flex-wrap gap-6">
               <div className="flex items-center space-x-2">
@@ -249,7 +257,7 @@ export default function ExperienceDetailPage({ params }: { params: { slug: strin
         {/* Bottom CTA */}
         <div className="mt-16 text-center bg-[#FDFBF7] border-2 border-[#E8E3DB] rounded-3xl p-12">
           <h3 className="text-3xl font-instrument-serif mb-4">Ready for an Unforgettable Experience?</h3>
-          <p className="text-lg mb-8 text-[#1A1A1A]/70 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 text-[#1A1A1A]/70 mx-auto">
             Book now to secure your spot. We'll confirm availability via WhatsApp.
           </p>
           <a

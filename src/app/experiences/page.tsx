@@ -36,12 +36,12 @@ export default function ExperiencesPage() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-center max-w-3xl mx-auto"
+            className="text-center  mx-auto"
           >
             <h1 className="text-5xl md:text-7xl font-instrument-serif text-[#1A1A1A] mb-6">
               Unforgettable Experiences
             </h1>
-            <p className="text-xl text-[#1A1A1A]/70 leading-relaxed font-instrument-serif italic mb-12">
+            <p className="text-xl text-[#1A1A1A]/80 leading-relaxed font-instrument-serif mb-12">
               From thrilling safaris to cultural immersions, expert-led
               adventures to culinary journeys. Create memories that last a
               lifetime.
@@ -197,10 +197,10 @@ export default function ExperiencesPage() {
           transition={{ delay: 0.5 }}
           className="mt-24 text-center bg-[#2D4032] text-white rounded-3xl p-12"
         >
-          <h3 className="text-4xl font-instrument-serif mb-4">
+          <h3 className="text-4xl text-white font-instrument-serif mb-4">
             Custom Experience Planning
           </h3>
-          <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 text-white/80  mx-auto">
             Want to combine multiple experiences or create a custom itinerary?
             Our team can design the perfect Kenya adventure tailored to your
             interests.
