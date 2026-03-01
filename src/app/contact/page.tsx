@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "motion/react";
-import { MessageCircle, Mail, MapPin, Phone, Clock } from "lucide-react";
+import { Mail, MapPin, Phone, Clock } from "lucide-react";
+import Link from "next/link";
+import { BsWhatsapp } from "react-icons/bs";
 
 export default function ContactPage() {
   return (
@@ -11,7 +13,7 @@ export default function ContactPage() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center mx-auto mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-instrument-serif text-[#1A1A1A] mb-6">
             Get in Touch
@@ -30,17 +32,17 @@ export default function ContactPage() {
 
             <div className="space-y-6">
               {/* WhatsApp */}
-              <a
+              <Link
                 href="https://wa.me/254700000000?text=Hi! I'd like to get in touch."
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-start space-x-4 p-6 bg-white rounded-2xl border border-[#E8E3DB] hover:border-[#C5A059] hover:shadow-lg transition-all group"
               >
                 <div className="w-12 h-12 bg-[#25D366]/10 rounded-full flex items-center justify-center shrink-0">
-                  <MessageCircle size={24} className="text-[#25D366]" />
+                  <BsWhatsapp size={24} className="text-[#25D366]" />
                 </div>
                 <div>
-                  <h3 className="font-bold mb-1 group-hover:text-[#C5A059] transition-colors">
+                  <h3 className="font-semibold mb-1 group-hover:text-[#C5A059] transition-colors">
                     WhatsApp (Preferred)
                   </h3>
                   <p className="text-sm text-[#1A1A1A]/70 mb-2">
@@ -50,7 +52,7 @@ export default function ContactPage() {
                     +254 700 000 000
                   </p>
                 </div>
-              </a>
+              </Link>
 
               {/* Email */}
               <div className="flex items-start space-x-4 p-6 bg-white rounded-2xl border border-[#E8E3DB]">
@@ -208,18 +210,26 @@ export default function ContactPage() {
 
         {/* CTA */}
         <div className="text-center bg-[#2D4032] text-white rounded-3xl p-12">
-          <h3 className="text-3xl font-instrument-serif mb-4">
+          <h3 className="text-3xl text-white font-instrument-serif mb-4">
             Ready to Book Your Stay?
           </h3>
-          <p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto">
+          <p className="text-lg mb-8 text-white/80 mx-auto">
             Browse our verified properties and start planning your Kenya adventure.
           </p>
-          <a
-            href="/stays"
-            className="inline-block bg-[#C5A059] text-white px-8 py-4 rounded-full font-bold hover:bg-[#b08e4d] transition-colors"
-          >
-            Explore Properties
-          </a>
+          <div className="flex lg:flex-row flex-col gap-4 items-center justify-center">
+            <Link
+              href="/stays"
+              className="inline-block bg-[#C5A059] text-white px-8 py-4 rounded-full font-bold hover:bg-[#b08e4d] transition-colors"
+            >
+              Explore Stays
+            </Link>
+            <Link
+              href="/activities"
+              className="inline-block bg-[#C5A059] text-white px-8 py-4 rounded-full font-bold hover:bg-[#b08e4d] transition-colors"
+            >
+              Explore Activities
+            </Link>
+          </div>
         </div>
       </div>
     </div>
