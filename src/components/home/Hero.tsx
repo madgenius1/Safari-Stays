@@ -58,9 +58,7 @@ export default function Hero() {
 
         </motion.p>
 
-        {/* Search Bar */}
         <motion.div
-          variants={itemVars}
           className="flex flex-col md:flex-row justify-center items-center gap-2 mb-12 max-w-4xl mx-auto"
         >
           {/* Stay Button */}
