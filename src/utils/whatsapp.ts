@@ -1,8 +1,8 @@
 export const generateWhatsAppLink = (
-  property,
-  dates,
-  guests,
-  estimatedPrice,
+  property: any,
+  dates: any,
+  guests: number,
+  estimatedPrice: number | string,
 ) => {
   const phoneNumber = "254700000000"; // Replace with real concierge number
   const checkIn = dates?.start

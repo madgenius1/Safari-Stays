@@ -1,12 +1,12 @@
 import { seasons } from "../lib/mockData";
 
-export const calculateSeasonalPrice = (basePrice, checkIn, checkOut) => {
+export const calculateSeasonalPrice = (basePrice: number, checkIn: string, checkOut: string) => {
   if (!checkIn || !checkOut)
     return { totalPrice: 0, nightlyRate: basePrice, season: "Regular" };
 
   const start = new Date(checkIn);
   const end = new Date(checkOut);
-  const nights = Math.ceil((end - start) / (1000 * 60 * 60 * 24));
+  const nights = Math.ceil((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
 
   if (nights <= 0)
     return { totalPrice: 0, nightlyRate: basePrice, season: "Regular" };

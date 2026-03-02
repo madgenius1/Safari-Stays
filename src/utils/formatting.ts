@@ -1,4 +1,4 @@
-export const formatKES = (amount) => {
+export const formatKES = (amount: number) => {
   return new Intl.NumberFormat("en-KE", {
     style: "currency",
     currency: "Ksh",
@@ -7,7 +7,7 @@ export const formatKES = (amount) => {
   }).format(amount);
 };
 
-export const formatDate = (date) => {
+export const formatDate = (date: string | number | Date) => {
   if (!date) return "";
   return new Date(date).toLocaleDateString("en-US", {
     month: "short",
