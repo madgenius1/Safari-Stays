@@ -20,7 +20,8 @@ export default function Footer() {
       title: "Company",
       links: [
         { name: "About Us", href: "/about" },
-        { name: "Airport Transfers", href: "/transfers" },
+        { name: "Airport Transfers", href: "/airport-transfers" },
+        { name: "SGR Transfers", href: "/sgr-transfers" },
         { name: "Host With Us", href: "/host-with-us" },
         { name: "FAQ", href: "/faq" },
       ],

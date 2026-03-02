@@ -265,6 +265,20 @@ export interface FAQItem {
   category: 'booking' | 'payment' | 'properties' | 'wifi' | 'safety' | 'cancellation' | 'general';
   order?: number;
 }
+//Transfer types
+export type VehicleType = 'Sedan' | 'Minivan' | 'Executive SUV';
+
+export interface RateConfig {
+  base: number;
+  perKm: number;
+  capacity: number;
+}
+
+export const VEHICLE_RATES: Record<VehicleType, RateConfig> = {
+  'Sedan': { base: 1000, perKm: 40, capacity: 3 },
+  'Minivan': { base: 2000, perKm: 60, capacity: 7 },
+  'Executive SUV': { base: 5000, perKm: 120, capacity: 4 },
+};
 
 // UTILITY TYPES
 
