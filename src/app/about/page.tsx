@@ -2,6 +2,7 @@
 
 import { motion } from "motion/react";
 import { Heart, Shield, Wifi, Users, Award, MapPin } from "lucide-react";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -135,18 +136,18 @@ export default function AboutPage() {
           <h3 className="text-4xl font-instrument-serif mb-4">
             Ready to Experience Kenya?
           </h3>
-          <p className="text-lg text-[#1A1A1A]/70 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-[#1A1A1A]/70 mb-8 max-w-4xl mx-auto">
             Let us help you find the perfect place to stay.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="/stays"
               className="inline-block bg-[#2D4032] text-white px-8 py-4 rounded-full font-bold hover:bg-[#1f2d23] transition-colors"
             >
               Browse Properties
-            </a>
+            </Link>
             <a
-              href="https://wa.me/254700000000?text=Hi! I'd like to learn more about Safari Stays."
+              href="https://wa.me/254759711145?text=Hi! I'd like to learn more about Safari Stays."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#C5A059] text-white px-8 py-4 rounded-full font-bold hover:bg-[#b08e4d] transition-colors"
