@@ -5,7 +5,20 @@ import { calculateSeasonalPrice } from "../../utils/pricing";
 import { generateWhatsAppLink } from "../../utils/whatsapp";
 import { motion } from "motion/react";
 
-export default function BookingPanel({ property }) {
+interface Property {
+  pricing: {
+    basePrice: number;
+  };
+  capacity: {
+    guests: number;
+  };
+}
+
+interface BookingPanelProps {
+  property: Property;
+}
+
+export default function BookingPanel({ property }: BookingPanelProps) {
   const [checkIn, setCheckIn] = useState("");
   const [checkOut, setCheckOut] = useState("");
   const [guests, setGuests] = useState(1);
