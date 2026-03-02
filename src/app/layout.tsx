@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: "Safari Stays & Homes",
     title: "Safari Stays & Homes | Premium Vacation Rentals, Experiences, and Travel Services in Kenya.",
     description:
-      "Discover verified stays across Kenya with tested WiFi speeds and WhatsApp-first booking.",
+      "Discover verified stays across Kenya, rich cultural experiences, and  WhatsApp-first booking.",
     images: [
       {
         url: "https://safaristays.com/og-image.jpg",
