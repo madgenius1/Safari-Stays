@@ -52,11 +52,11 @@ export default function ActivityDetailPage({
           alt={activity.coverImage.alt}
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/40 to-transparent" />
 
         {/* Breadcrumbs */}
         <div className="absolute top-24 left-0 right-0 z-10">
-          <div className="max-w-[1440px] mx-auto px-6">
+          <div className="max-w-360 mx-auto px-6">
             <div className="flex items-center gap-2 text-white/90 text-sm">
               <Link href="/" className="hover:text-white transition-colors">
                 Home
@@ -73,7 +73,7 @@ export default function ActivityDetailPage({
 
         {/* Content Overlay */}
         <div className="absolute bottom-0 left-0 right-0 pb-12">
-          <div className="max-w-[1440px] mx-auto px-6">
+          <div className="max-w-360 mx-auto px-6">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -127,7 +127,7 @@ export default function ActivityDetailPage({
         </div>
       </div>
 
-      <div className="max-w-[1440px] mx-auto px-6 py-16">
+      <div className="max-w-360 mx-auto px-6 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-12">
@@ -172,7 +172,7 @@ export default function ActivityDetailPage({
             </div>
 
             {/* Highlights */}
-            <div className="bg-gradient-to-br from-safari-green/5 to-safari-gold/5 p-8 rounded-3xl border border-safari-border">
+            <div className="bg-linear-to-br from-safari-green/5 to-safari-gold/5 p-8 rounded-3xl border border-safari-border">
               <h2 className="text-3xl font-instrument-serif mb-6 text-safari-charcoal">
                 Experience Highlights
               </h2>
@@ -185,7 +185,7 @@ export default function ActivityDetailPage({
                     transition={{ delay: index * 0.1 }}
                     className="flex items-start gap-3 bg-white p-4 rounded-xl"
                   >
-                    <CheckCircle size={24} className="text-safari-green flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={24} className="text-safari-green shrink-0 mt-0.5" />
                     <span className="text-safari-charcoal/90">{highlight}</span>
                   </motion.div>
                 ))}
@@ -204,7 +204,7 @@ export default function ActivityDetailPage({
                 <ul className="space-y-3">
                   {activity.included.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-green-800">
-                      <CheckCircle size={20} className="flex-shrink-0 mt-0.5" />
+                      <CheckCircle size={20} className="shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -219,7 +219,7 @@ export default function ActivityDetailPage({
                 <ul className="space-y-3">
                   {activity.notIncluded.map((item, index) => (
                     <li key={index} className="flex items-start gap-3 text-red-800">
-                      <XCircle size={20} className="flex-shrink-0 mt-0.5" />
+                      <XCircle size={20} className="shrink-0 mt-0.5" />
                       <span>{item}</span>
                     </li>
                   ))}
@@ -236,7 +236,7 @@ export default function ActivityDetailPage({
                 <div className="space-y-6">
                   {activity.itinerary.map((item, index) => (
                     <div key={index} className="flex gap-6 items-start">
-                      <div className="bg-gradient-to-br from-safari-gold to-safari-gold/80 text-white min-w-[100px] h-[100px] rounded-2xl flex flex-col items-center justify-center flex-shrink-0 shadow-lg">
+                      <div className="bg-linear-to-br from-safari-gold to-safari-gold/80 text-white min-w-25 h-25 rounded-2xl flex flex-col items-center justify-center shrink-0 shadow-lg">
                         <span className="text-2xl font-bold">{item.time}</span>
                       </div>
                       <div className="flex-1 bg-safari-bone p-6 rounded-2xl">
@@ -256,7 +256,7 @@ export default function ActivityDetailPage({
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {activity.whatToBring.map((item, index) => (
                   <div key={index} className="flex items-center gap-3 text-blue-900 bg-white p-4 rounded-xl">
-                    <div className="w-3 h-3 bg-blue-600 rounded-full flex-shrink-0" />
+                    <div className="w-3 h-3 bg-blue-600 rounded-full shrink-0" />
                     <span className="font-medium">{item}</span>
                   </div>
                 ))}
@@ -266,7 +266,7 @@ export default function ActivityDetailPage({
             {/* Important Information */}
             <div className="bg-yellow-50 p-8 rounded-3xl border-2 border-yellow-200">
               <div className="flex items-start gap-4">
-                <AlertCircle size={32} className="text-yellow-700 flex-shrink-0" />
+                <AlertCircle size={32} className="text-yellow-700 shrink-0" />
                 <div>
                   <h2 className="text-2xl font-instrument-serif text-yellow-900 mb-4">
                     Important Information
@@ -289,7 +289,7 @@ export default function ActivityDetailPage({
                 Cancellation Policy
               </h2>
               <div className="flex items-start gap-3">
-                <Info size={24} className="text-safari-gold flex-shrink-0 mt-1" />
+                <Info size={24} className="text-safari-gold shrink-0 mt-1" />
                 <p className="text-safari-charcoal/80 text-lg">{activity.cancellationPolicy}</p>
               </div>
             </div>
@@ -351,7 +351,7 @@ export default function ActivityDetailPage({
               {/* Meeting Point */}
               <div className="bg-white p-6 rounded-2xl border border-safari-border">
                 <div className="flex items-start gap-3">
-                  <MapPin size={24} className="text-safari-gold flex-shrink-0 mt-1" />
+                  <MapPin size={24} className="text-safari-gold shrink-0 mt-1" />
                   <div>
                     <h3 className="font-bold mb-2 text-safari-charcoal">Meeting Point</h3>
                     <p className="text-sm text-safari-charcoal/70">{activity.meetingPoint}</p>
@@ -362,7 +362,7 @@ export default function ActivityDetailPage({
               {/* Availability */}
               <div className="bg-white p-6 rounded-2xl border border-safari-border">
                 <div className="flex items-start gap-3">
-                  <Calendar size={24} className="text-safari-gold flex-shrink-0 mt-1" />
+                  <Calendar size={24} className="text-safari-gold shrink-0 mt-1" />
                   <div className="w-full">
                     <h3 className="font-bold mb-3 text-safari-charcoal">Availability</h3>
                     <p className="text-sm text-safari-charcoal/70 mb-3">
@@ -393,7 +393,7 @@ export default function ActivityDetailPage({
               </div>
 
               {/* Perfect For */}
-              <div className="bg-gradient-to-br from-safari-gold/10 to-safari-green/10 p-6 rounded-2xl border border-safari-border">
+              <div className="bg-linear-to-br from-safari-gold/10 to-safari-green/10 p-6 rounded-2xl border border-safari-border">
                 <h3 className="font-bold mb-4 text-safari-charcoal">Perfect For:</h3>
                 <div className="flex flex-wrap gap-2">
                   {activity.bestFor.map((tag, index) => (

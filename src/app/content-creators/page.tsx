@@ -113,11 +113,11 @@ export default function ContentCreatorsPage() {
             >
               <div className="relative aspect-4/5 rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1493246507139-91e8bef99c02?auto=format&fit=crop&w=800"
+                  src="https://plus.unsplash.com/premium_photo-1770048535266-72f57428a6a8?q=80&w=686&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                   alt="Creator working on laptop with scenic view"
                   className="w-full h-full object-cover"
                 />
-                <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-6 rounded-2xl">
+                <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-sm p-4 rounded-xl">
                   <div className="flex items-center space-x-3 mb-3">
                     <Wifi className="text-[#2D4032]" size={24} />
                     <div>

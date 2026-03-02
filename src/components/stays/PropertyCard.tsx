@@ -2,7 +2,26 @@ import { MapPin, Wifi, Users, Bed } from "lucide-react";
 import { formatKES } from "../../utils/formatting";
 import { motion } from "motion/react";
 
-export default function PropertyCard({ property }) {
+interface Property {
+  slug: string;
+  name: string;
+  tagline: string;
+  location: {
+    area: string;
+  };
+  capacity: {
+    guests: number;
+    bedrooms: number;
+  };
+  pricing: {
+    basePrice: number;
+  };
+  images: Array<{
+    url: string;
+  }>;
+}
+
+export default function PropertyCard({ property }: { property: Property }) {
   return (
     <motion.a
       href={`/stays/${property.slug}`}

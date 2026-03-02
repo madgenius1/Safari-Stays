@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Search, SlidersHorizontal } from "lucide-react";
 
-export default function FilterBar({ activeVibe, setActiveVibe }) {
+export default function FilterBar({ activeVibe, setActiveVibe }: { activeVibe: string; setActiveVibe: (vibe: string) => void }) {
   const vibes = [
     { id: "all", label: "All Stays" },
     { id: "urban", label: "Urban Chic" },

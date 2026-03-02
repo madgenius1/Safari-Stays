@@ -246,7 +246,7 @@ export interface VibeCategory {
 export interface Testimonial {
   id: string;
   author: string;
-  avatar?: string;
+  avatar: string;
   role?: string;
   comment: string;
   rating: number;

@@ -4,12 +4,17 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Maximize2, X } from "lucide-react";
 
-export default function ImageGallery({ images }) {
-  const [selectedImage, setSelectedImage] = useState(null);
+interface Image {
+  url: string;
+  alt: string;
+}
+
+export default function ImageGallery({ images }: { images: Image[] }) {
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <div className="relative">
-      <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-[500px] md:h-[600px] rounded-[32px] overflow-hidden shadow-2xl">
+      <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-125 md:h-150 rounded-[32px] overflow-hidden shadow-2xl">
         {/* Main Hero Image */}
         <div
           className="md:col-span-2 md:row-span-2 relative group cursor-pointer"
@@ -54,7 +59,7 @@ export default function ImageGallery({ images }) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-6"
+            className="fixed inset-0 z-100 bg-black/90 flex items-center justify-center p-6"
             onClick={() => setSelectedImage(null)}
           >
             <button className="absolute top-10 right-10 text-white">

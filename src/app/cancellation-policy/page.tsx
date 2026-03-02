@@ -61,7 +61,7 @@ export default function CancellationPolicyPage() {
               <strong>Need to cancel or have questions?</strong>
             </p>
             <a
-              href="https://wa.me/254700000000?text=Hi! I need to cancel my booking."
+              href="https://wa.me/254759711145?text=Hi! I need to cancel my booking."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-[#C5A059] px-6 py-3 rounded-full font-bold hover:bg-[#b08e4d] transition-colors"

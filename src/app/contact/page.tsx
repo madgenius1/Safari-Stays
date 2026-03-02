@@ -195,7 +195,7 @@ export default function ContactPage() {
                 <p className="text-xs text-center text-[#1A1A1A]/50">
                   Or chat with us instantly on{" "}
                   <a
-                    href="https://wa.me/254700000000"
+                    href="https://wa.me/254759711145"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-[#25D366] font-semibold hover:underline"

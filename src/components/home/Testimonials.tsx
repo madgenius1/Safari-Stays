@@ -57,7 +57,6 @@ export default function Testimonials() {
                 {!review.isBusiness && (
                   <div className="flex items-center space-x-3 mb-3">
                     <img
-                      src={review.avatar}
                       alt={review.user}
                       className="w-8 h-8 rounded-full"
                     />
