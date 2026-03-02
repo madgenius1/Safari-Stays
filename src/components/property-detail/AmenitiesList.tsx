@@ -1,6 +1,11 @@
 import { Check } from "lucide-react";
 
-export default function AmenitiesList({ amenities, highlights }) {
+interface AmenitiesListProps {
+  amenities: string[];
+  highlights: string[];
+}
+
+export default function AmenitiesList({ amenities, highlights }: AmenitiesListProps) {
   return (
     <div className="space-y-12">
       {/* Highlights */}
