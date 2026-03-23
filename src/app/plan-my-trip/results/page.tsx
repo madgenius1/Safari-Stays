@@ -84,7 +84,7 @@ export default function TripResultsPage() {
   if (error || !tripPlan) {
     return (
       <div className="min-h-screen bg-safari-bone flex items-center justify-center px-6">
-        <div className="max-w-md text-center">
+        <div className="max-w-4xl text-center">
           <div className="text-6xl mb-6">😔</div>
           <h2 className="text-3xl font-instrument-serif text-safari-charcoal mb-4">
             {error || 'Unable to create trip plan'}

@@ -204,11 +204,11 @@ export default function PlanMyTripPage() {
                   </p>
                 </div>
 
-                <div className="max-w-md mx-auto">
+                <div className="max-w-4xl mx-auto">
                   <div className="flex items-center justify-center gap-6">
                     <button
                       onClick={() => updatePreference('guests', Math.max(1, (preferences.guests || 1) - 1))}
-                      className="w-14 h-14 rounded-full bg-safari-border hover:bg-safari-gold hover:text-white transition-colors flex items-center justify-center text-2xl font-bold"
+                      className="w-10 h-10 rounded-full bg-safari-border hover:bg-safari-gold hover:text-white transition-colors text-center flex items-center justify-center text-2xl font-bold"
                     >
                       -
                     </button>
@@ -222,7 +222,7 @@ export default function PlanMyTripPage() {
                     </div>
                     <button
                       onClick={() => updatePreference('guests', Math.min(10, (preferences.guests || 1) + 1))}
-                      className="w-14 h-14 rounded-full bg-safari-border hover:bg-safari-gold hover:text-white transition-colors flex items-center justify-center text-2xl font-bold"
+                      className="w-10 h-10 rounded-full bg-safari-border hover:bg-safari-gold hover:text-white transition-colors text-center flex items-center justify-center text-2xl font-bold"
                     >
                       +
                     </button>
@@ -258,7 +258,7 @@ export default function PlanMyTripPage() {
                   </p>
                 </div>
 
-                <div className="max-w-md mx-auto">
+                <div className="max-w-4xl mx-auto">
                   <input
                     type="range"
                     min="1"
@@ -320,7 +320,7 @@ export default function PlanMyTripPage() {
                   </p>
                 </div>
 
-                <div className="max-w-md mx-auto">
+                <div className="max-w-4xl mx-auto">
                   <div className="text-center mb-6">
                     <div className="text-5xl font-bold text-safari-green mb-2">
                       KES {(preferences.budget || 0).toLocaleString()}
