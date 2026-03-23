@@ -330,3 +330,64 @@ export const faqs: FAQItem[] = [
     order: 6,
   },
 ];
+
+// TRIP PLANNING VIBE OPTIONS
+export const vibeOptions = [
+  {
+    id: 'adventure',
+    label: 'Adventure & Thrill',
+    description: 'High-energy activities, water sports, and adrenaline rushes',
+    icon: '🏄',
+    keywords: ['adventure', 'extreme', 'water-sports', 'safari', 'active', 'thrilling'],
+  },
+  {
+    id: 'calm',
+    label: 'Chic & Calm',
+    description: 'Relaxation, spa time, peaceful beaches, and wellness',
+    icon: '🧘',
+    keywords: ['calm', 'peaceful', 'luxury', 'spa', 'relaxation', 'wellness', 'serene'],
+  },
+  {
+    id: 'romantic',
+    label: 'Romantic',
+    description: 'Couples activities, sunset experiences, and intimate moments',
+    icon: '💑',
+    keywords: ['romantic', 'couples', 'honeymoon', 'intimate', 'sunset', 'special'],
+  },
+  {
+    id: 'aesthetic',
+    label: 'Aesthetic & Instagram',
+    description: 'Photogenic locations, content creation, beautiful settings',
+    icon: '📸',
+    keywords: ['photography', 'instagram', 'aesthetic', 'photogenic', 'scenic', 'beautiful'],
+  },
+  {
+    id: 'creative',
+    label: 'Creative & Cultural',
+    description: 'Art, culture, local experiences, and authentic connections',
+    icon: '🎨',
+    keywords: ['cultural', 'creative', 'art', 'local', 'authentic', 'traditional'],
+  },
+  {
+    id: 'family',
+    label: 'Family Fun',
+    description: 'Kid-friendly activities, safe experiences, family bonding',
+    icon: '👨‍👩‍👧‍👦',
+    keywords: ['family', 'kids', 'children', 'safe', 'educational', 'fun'],
+  },
+  {
+    id: 'luxury',
+    label: 'Luxury & Indulgence',
+    description: 'Premium experiences, fine dining, exclusive access',
+    icon: '✨',
+    keywords: ['luxury', 'premium', 'exclusive', 'upscale', 'high-end', 'sophisticated'],
+  },
+  {
+    id: 'nature',
+    label: 'Nature & Wildlife',
+    description: 'Safari, wildlife encounters, marine life, eco-tourism',
+    icon: '🦁',
+    keywords: ['nature', 'wildlife', 'safari', 'marine', 'eco', 'conservation'],
+  },
+];
+ 

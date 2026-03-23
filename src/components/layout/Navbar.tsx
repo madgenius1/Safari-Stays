@@ -76,7 +76,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center">
-          <a
+          <Link
             href="https://wa.me/254700000000?text=Hi! I need help planning my Kenya trip."
             target="_blank"
             rel="noopener noreferrer"
@@ -86,7 +86,7 @@ export default function Navbar() {
               }`}
           >
             <span className="text-sm font-semibold">Plan My Trip</span>
-          </a>
+          </Link>
         </div>
 
         {/* Mobile Toggle */}
@@ -120,24 +120,22 @@ export default function Navbar() {
           >
             <div className="flex flex-col space-y-6">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
                   href={link.href}
                   className="text-lg font-medium text-[#1A1A1A] hover:text-[#C5A059] transition-colors"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
-              <a
-                href="https://wa.me/254700000000?text=Hi! I need help planning my Kenya trip."
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/plan-my-trip"
                 className="w-full bg-[#C5A059] text-white py-4 rounded-xl font-bold text-center hover:bg-[#b08e4d] transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Plan My Trip
-              </a>
+              </Link>
             </div>
           </motion.div>
         )}

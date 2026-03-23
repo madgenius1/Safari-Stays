@@ -4,25 +4,24 @@ export * from './types';
 export { properties } from './mockData.properties';
 export { destinations } from './mockData.destinations';
 export { experiences } from './mockData.experiences';
+export { activities, activityCategories, activityRegions, getActivitiesByRegion, getActivitiesByCategory, getFeaturedActivities, getActivityBySlug } from './mockData.activities';
 export { blogPosts, blogCategories } from './mockData.blogPosts';
 export { reviews, testimonials } from './mockData.reviews';
-export { seasons, vibeCategories, faqs } from './mockData.misc';
-export { activities, activityCategories, activityRegions, getActivitiesByRegion, getActivitiesByCategory, getFeaturedActivities, getActivityBySlug } from './mockData.activities';
-
+export { seasons, vibeCategories, faqs, vibeOptions } from './mockData.misc';
 
 // Import for utility functions
 import { properties } from './mockData.properties';
 import { destinations } from './mockData.destinations';
-import { activities } from './mockData.activities';
 import { experiences } from './mockData.experiences';
+import { activities } from './mockData.activities';
 import { blogPosts, blogCategories } from './mockData.blogPosts';
-import { faqs } from './mockData.misc';
 import { reviews, testimonials } from './mockData.reviews';
-import { seasons, vibeCategories, } from './mockData.misc';
+import { seasons, vibeCategories, faqs } from './mockData.misc';
 
 // Legacy export for backward compatibility
 export const vibes = vibeCategories;
 
+// SUMMARY STATISTICS
 
 export const mockDataStats = {
   properties: {
@@ -82,6 +81,14 @@ export const mockDataStats = {
       activities.reduce((sum, a) => sum + a.price, 0) / activities.length
     ),
   },
+  blog: {
+    total: blogPosts.length,
+    featured: blogPosts.filter(p => p.featured).length,
+    totalViews: blogPosts.reduce((sum, p) => sum + (p.views || 0), 0),
+    averageReadTime: Math.round(
+      blogPosts.reduce((sum, p) => sum + p.readTime, 0) / blogPosts.length
+    ),
+  },
   reviews: {
     total: reviews.length,
     verified: reviews.filter(r => r.verified).length,
@@ -95,19 +102,21 @@ export const mockDataStats = {
   },
   faqs: {
     total: faqs.length,
-     byCategory: {
-       booking: faqs.filter(f => f.category === 'booking').length,
-       payment: faqs.filter(f => f.category === 'payment').length,
-       properties: faqs.filter(f => f.category === 'properties').length,
-       wifi: faqs.filter(f => f.category === 'wifi').length,
-       safety: faqs.filter(f => f.category === 'safety').length,
-       cancellation: faqs.filter(f => f.category === 'cancellation').length,
-       general: faqs.filter(f => f.category === 'general').length,
-     },
-   },
+    byCategory: {
+      booking: faqs.filter(f => f.category === 'booking').length,
+      payment: faqs.filter(f => f.category === 'payment').length,
+      properties: faqs.filter(f => f.category === 'properties').length,
+      wifi: faqs.filter(f => f.category === 'wifi').length,
+      safety: faqs.filter(f => f.category === 'safety').length,
+      cancellation: faqs.filter(f => f.category === 'cancellation').length,
+      general: faqs.filter(f => f.category === 'general').length,
+    },
+  },
 };
 
+// ============================================================================
 // UTILITY FUNCTIONS
+// ============================================================================
 
 /**
  * Get featured content across all types
@@ -116,6 +125,7 @@ export const getFeaturedContent = () => ({
   properties: properties.filter(p => p.featured),
   destinations: destinations.filter(d => d.featured),
   experiences: experiences.filter(e => e.featured),
+  activities: activities.filter(a => a.featured),
   blogPosts: blogPosts.filter(p => p.featured),
 });
 
@@ -157,12 +167,13 @@ export const getPropertyReviews = (propertyId: string) => {
 
 /**
  * Get FAQs by category
- */
-// export const getFAQsByCategory = (category: string) => {
-//   return faqs.filter(f => f.category === category).sort((a, b) => 
-//     (a.order || 999) - (b.order || 999)
-//   );
-// };
+ 
+export const getFAQsByCategory = (category: string) => {
+  return faqs.filter(f => f.category === category).sort((a, b) => 
+    (a.order || 999) - (b.order || 999)
+  );
+};
+*/
 
 /**
  * Search properties

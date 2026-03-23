@@ -8,13 +8,13 @@ export interface Coordinates {
 export interface Image {
   url: string;
   alt: string;
-  type?: 'hero' | 'gallery' | 'thumbnail';
+  type?: "hero" | "gallery" | "thumbnail";
   caption?: string;
 }
 
 export interface PriceInfo {
   basePrice: number;
-  currency: 'Ksh' | 'USD';
+  currency: "Ksh" | "USD";
   cleaningFee?: number;
   securityDeposit?: number;
 }
@@ -37,7 +37,17 @@ export interface Location {
 export interface NearbyAttraction {
   name: string;
   distance: string;
-  type: 'restaurant' | 'cafe' | 'attraction' | 'shopping' | 'transport' | 'activity' | 'dining' | 'nightlife' | 'culture' | 'safari';
+  type:
+    | "restaurant"
+    | "cafe"
+    | "attraction"
+    | "shopping"
+    | "transport"
+    | "activity"
+    | "dining"
+    | "nightlife"
+    | "culture"
+    | "safari";
   description?: string;
   priceRange?: string;
 }
@@ -83,7 +93,7 @@ export interface Property {
   reviewCount?: number;
   featured?: boolean;
   vibeCategories?: string[];
-  status?: 'active' | 'draft' | 'archived';
+  status?: "active" | "draft" | "archived";
 }
 
 // DESTINATION TYPES
@@ -97,7 +107,13 @@ export interface DestinationHighlight {
 export interface LocalTip {
   name: string;
   description: string;
-  category: 'restaurant' | 'cafe' | 'activity' | 'shopping' | 'nightlife' | 'culture';
+  category:
+    | "restaurant"
+    | "cafe"
+    | "activity"
+    | "shopping"
+    | "nightlife"
+    | "culture";
   priceRange?: string;
   image?: string;
   distance?: string;
@@ -158,13 +174,19 @@ export interface Experience {
   id: string;
   slug: string;
   title: string;
-  category: 'safari' | 'cultural' | 'adventure' | 'food-wine' | 'wellness' | 'photography';
+  category:
+    | "safari"
+    | "cultural"
+    | "adventure"
+    | "food-wine"
+    | "wellness"
+    | "photography";
   tagline: string;
   description: string;
   duration: string;
   groupSize: GroupSize;
   price: number;
-  currency: 'Ksh' | 'USD';
+  currency: "Ksh" | "USD";
   highlights: string[];
   included: string[];
   notIncluded: string[];
@@ -174,7 +196,7 @@ export interface Experience {
   coverImage: Image;
   gallery: Image[];
   availability: Availability;
-  difficulty?: 'easy' | 'moderate' | 'challenging';
+  difficulty?: "easy" | "moderate" | "challenging";
   featured?: boolean;
   reviews?: Review[];
   averageRating?: number;
@@ -218,12 +240,12 @@ export interface BlogPost {
 
 export interface DateRange {
   start: string; // ISO date
-  end: string;   // ISO date
+  end: string; // ISO date
 }
 
 export interface Season {
   id: string;
-  name: 'Regular' | 'Peak' | 'Off-Peak' | 'Festive' | 'Migration';
+  name: "Regular" | "Peak" | "Off-Peak" | "Festive" | "Migration";
   description: string;
   multiplier: number;
   dateRanges: DateRange[];
@@ -262,11 +284,18 @@ export interface FAQItem {
   id: string;
   question: string;
   answer: string;
-  category: 'booking' | 'payment' | 'properties' | 'wifi' | 'safety' | 'cancellation' | 'general';
+  category:
+    | "booking"
+    | "payment"
+    | "properties"
+    | "wifi"
+    | "safety"
+    | "cancellation"
+    | "general";
   order?: number;
 }
 //Transfer types
-export type VehicleType = 'Sedan' | 'Minivan' | 'Executive SUV';
+export type VehicleType = "Sedan" | "Minivan" | "Executive SUV";
 
 export interface RateConfig {
   base: number;
@@ -275,9 +304,9 @@ export interface RateConfig {
 }
 
 export const VEHICLE_RATES: Record<VehicleType, RateConfig> = {
-  'Sedan': { base: 1000, perKm: 40, capacity: 3 },
-  'Minivan': { base: 2000, perKm: 60, capacity: 7 },
-  'Executive SUV': { base: 5000, perKm: 120, capacity: 4 },
+  Sedan: { base: 1000, perKm: 40, capacity: 3 },
+  Minivan: { base: 2000, perKm: 60, capacity: 7 },
+  "Executive SUV": { base: 5000, perKm: 120, capacity: 4 },
 };
 
 // UTILITY TYPES
@@ -316,6 +345,76 @@ export interface SEOMetadata {
   canonicalUrl?: string;
 }
 
+//TRIP PLANNING
+export interface TripPreferences {
+  budget: number;
+  destination: string;
+  guests: number;
+  vibe: string[];
+  duration: number; // number of nights
+  startDate?: string;
+}
+
+export interface TripPlan {
+  id: string;
+  preferences: TripPreferences;
+  rating: string;
+  wifi: string;
+  accommodation: {
+    property: Property;
+    rating: string;
+    wifi: string;
+    totalNights: number;
+    totalCost: number;
+  };
+  activities: Array<{
+    activity: Activity;
+    day: number;
+    timeSlot: "morning" | "afternoon" | "evening";
+  }>;
+  itinerary: DayItinerary[];
+  budget: {
+    accommodation: number;
+    activities: number;
+    meals: number;
+    transport: number;
+    total: number;
+    remaining: number;
+  };
+  recommendations: {
+    restaurants: string[];
+    attractions: string[];
+    tips: string[];
+  };
+}
+
+export interface DayItinerary {
+  day: number;
+  date: string;
+  title: string;
+  activities: Array<{
+    time: string;
+    activity: string;
+    description: string;
+    cost?: number;
+    location?: string;
+  }>;
+  meals: {
+    breakfast?: string;
+    lunch?: string;
+    dinner?: string;
+  };
+  estimatedCost: number;
+}
+
+export interface VibeOption {
+  id: string;
+  label: string;
+  description: string;
+  icon: string;
+  keywords: string[];
+}
+
 //ACTIVITY TYPES
 export interface Activity {
   id: string;
@@ -323,8 +422,13 @@ export interface Activity {
   title: string;
   subtitle: string;
   location: string;
-  region: 'diani' | 'watamu' | 'malindi';
-  category: 'water-sports' | 'photography' | 'adventure' | 'wildlife' | 'cultural';
+  region: "diani" | "watamu" | "malindi";
+  category:
+    | "water-sports"
+    | "photography"
+    | "adventure"
+    | "wildlife"
+    | "cultural";
   type: string;
   price: number;
   originalPrice?: number;
@@ -334,7 +438,7 @@ export interface Activity {
     min: number;
     max: number;
   };
-  difficulty: 'easy' | 'moderate' | 'hard' | 'extreme';
+  difficulty: "easy" | "moderate" | "hard" | "extreme";
   featured: boolean;
   bestFor: string[];
   coverImage: Image;
