@@ -41,7 +41,7 @@ export default function Navbar() {
         >
           <Image
             src="/images/logo.webp"
-            alt="Zanari Logo"
+            alt="Safari Stays Logo"
             width={120}
             height={80}
             className="rounded-sm brightness-110"
@@ -77,9 +77,7 @@ export default function Navbar() {
         {/* Desktop CTA */}
         <div className="hidden lg:flex items-center">
           <Link
-            href="https://wa.me/254700000000?text=Hi! I need help planning my Kenya trip."
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/plan-my-trip"
             className={`flex items-center space-x-2 px-6 py-2.5 rounded-full border transition-all ${isScrolled
               ? "border-[#2D4032] text-[#2D4032] hover:bg-[#2D4032] hover:text-white"
               : "border-white text-white hover:bg-white hover:text-[#2D4032]"
