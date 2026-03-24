@@ -63,7 +63,7 @@ export default function PlanMyTripPage() {
 
     // Store preferences in sessionStorage
     sessionStorage.setItem('tripPreferences', JSON.stringify(preferences));
-    
+
     // Navigate to results
     router.push('/plan-my-trip/results');
   };
@@ -94,7 +94,7 @@ export default function PlanMyTripPage() {
             Plan Your Perfect Trip
           </h1>
           <p className="text-xl text-safari-charcoal/70 font-instrument-serif italic">
-            Answer a few questions and we'll curate your ideal Kenya experience
+            Answer a few questions and we&apos;ll curate your ideal Kenya experience
           </p>
         </motion.div>
 
@@ -104,21 +104,19 @@ export default function PlanMyTripPage() {
             {Array.from({ length: totalSteps }).map((_, idx) => (
               <div key={idx} className="flex items-center flex-1">
                 <div
-                  className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all ${
-                    idx + 1 < step
-                      ? 'bg-safari-green text-white'
-                      : idx + 1 === step
+                  className={`w-10 h-10 rounded-full flex items-center justify-center font-bold transition-all ${idx + 1 < step
+                    ? 'bg-safari-green text-white'
+                    : idx + 1 === step
                       ? 'bg-safari-gold text-white scale-110'
                       : 'bg-safari-border text-safari-charcoal/40'
-                  }`}
+                    }`}
                 >
                   {idx + 1 < step ? <Check size={20} /> : idx + 1}
                 </div>
                 {idx < totalSteps - 1 && (
                   <div
-                    className={`flex-1 h-1 mx-2 rounded transition-all ${
-                      idx + 1 < step ? 'bg-safari-green' : 'bg-safari-border'
-                    }`}
+                    className={`flex-1 h-1 mx-2 rounded transition-all ${idx + 1 < step ? 'bg-safari-green' : 'bg-safari-border'
+                      }`}
                   />
                 )}
               </div>
@@ -162,11 +160,10 @@ export default function PlanMyTripPage() {
                     <button
                       key={dest.id}
                       onClick={() => updatePreference('destination', dest.id)}
-                      className={`p-6 rounded-2xl border-2 text-left transition-all hover:scale-[1.02] ${
-                        preferences.destination === dest.id
-                          ? 'border-safari-green bg-safari-green/5 shadow-lg'
-                          : 'border-safari-border hover:border-safari-gold'
-                      }`}
+                      className={`p-6 rounded-2xl border-2 text-left transition-all hover:scale-[1.02] ${preferences.destination === dest.id
+                        ? 'border-safari-green bg-safari-green/5 shadow-lg'
+                        : 'border-safari-border hover:border-safari-gold'
+                        }`}
                     >
                       <h3 className="font-bold text-lg mb-1">{dest.label}</h3>
                       <p className="text-sm text-safari-charcoal/60">{dest.description}</p>
@@ -230,7 +227,7 @@ export default function PlanMyTripPage() {
 
                   <div className="mt-8 p-4 bg-blue-50 rounded-xl border border-blue-200">
                     <p className="text-sm text-blue-900">
-                      💡 <strong>Tip:</strong> We'll match you with accommodations that comfortably fit your group size.
+                      💡 <strong>Tip:</strong> We&apos;ll match you with accommodations that comfortably fit your group size.
                     </p>
                   </div>
                 </div>
@@ -267,7 +264,7 @@ export default function PlanMyTripPage() {
                     onChange={(e) => updatePreference('duration', parseInt(e.target.value))}
                     className="w-full h-3 bg-safari-border rounded-lg appearance-none cursor-pointer accent-safari-gold"
                   />
-                  
+
                   <div className="text-center mt-6">
                     <div className="text-6xl font-bold text-safari-green mb-2">
                       {preferences.duration}
@@ -282,11 +279,10 @@ export default function PlanMyTripPage() {
                       <button
                         key={nights}
                         onClick={() => updatePreference('duration', nights)}
-                        className={`p-4 rounded-xl border-2 transition-all ${
-                          preferences.duration === nights
-                            ? 'border-safari-gold bg-safari-gold/10'
-                            : 'border-safari-border hover:border-safari-gold'
-                        }`}
+                        className={`p-4 rounded-xl border-2 transition-all ${preferences.duration === nights
+                          ? 'border-safari-gold bg-safari-gold/10'
+                          : 'border-safari-border hover:border-safari-gold'
+                          }`}
                       >
                         <div className="font-bold text-2xl">{nights}</div>
                         <div className="text-xs text-safari-charcoal/60 mt-1">
@@ -350,11 +346,10 @@ export default function PlanMyTripPage() {
                       <button
                         key={preset.amount}
                         onClick={() => updatePreference('budget', preset.amount)}
-                        className={`p-4 rounded-xl border-2 transition-all ${
-                          preferences.budget === preset.amount
-                            ? 'border-safari-gold bg-safari-gold/10'
-                            : 'border-safari-border hover:border-safari-gold'
-                        }`}
+                        className={`p-4 rounded-xl border-2 transition-all ${preferences.budget === preset.amount
+                          ? 'border-safari-gold bg-safari-gold/10'
+                          : 'border-safari-border hover:border-safari-gold'
+                          }`}
                       >
                         <div className="font-bold text-lg">KES {(preset.amount / 1000).toFixed(0)}K</div>
                         <div className="text-xs text-safari-charcoal/60 mt-1">{preset.label}</div>
@@ -393,11 +388,10 @@ export default function PlanMyTripPage() {
                       <button
                         key={vibe.id}
                         onClick={() => toggleVibe(vibe.id)}
-                        className={`p-6 rounded-2xl border-2 text-left transition-all hover:scale-[1.02] ${
-                          isSelected
-                            ? 'border-safari-green bg-safari-green/5 shadow-lg'
-                            : 'border-safari-border hover:border-safari-gold'
-                        }`}
+                        className={`p-6 rounded-2xl border-2 text-left transition-all hover:scale-[1.02] ${isSelected
+                          ? 'border-safari-green bg-safari-green/5 shadow-lg'
+                          : 'border-safari-border hover:border-safari-gold'
+                          }`}
                       >
                         <div className="flex items-start gap-4">
                           <div className="text-4xl">{vibe.icon}</div>
@@ -477,12 +471,11 @@ export default function PlanMyTripPage() {
         {/* Features */}
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           {[
-            { icon: '🤖', title: 'AI-Powered', desc: 'Smart matching algorithm' },
-            { icon: '⚡', title: 'Instant Results', desc: 'Get your plan in seconds' },
-            { icon: '💯', title: 'Personalized', desc: 'Tailored to your preferences' },
+            { title: 'Data-Powered', desc: 'Smart matching algorithm' },
+            { title: 'Instant Results', desc: 'Get your plan in seconds' },
+            { title: 'Personalized', desc: 'Tailored to your preferences' },
           ].map((feature, idx) => (
             <div key={idx} className="p-6 bg-white rounded-2xl border border-safari-border">
-              <div className="text-4xl mb-3">{feature.icon}</div>
               <h3 className="font-bold mb-1">{feature.title}</h3>
               <p className="text-sm text-safari-charcoal/60">{feature.desc}</p>
             </div>
