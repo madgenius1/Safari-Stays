@@ -228,7 +228,6 @@ export default function TripResultsPage() {
                   </div>
                   <div className="text-center p-4 bg-safari-bone rounded-xl">
                     <TrendingUp size={24} className="mx-auto mb-2 text-safari-gold" />
-                    <div className="font-bold">{accommodation.property.wifi?.speed || 0} Mbps</div>
                     <div className="text-xs text-safari-charcoal/60">WiFi</div>
                   </div>
                 </div>
@@ -259,7 +258,7 @@ export default function TripResultsPage() {
                       key={idx}
                       className="flex gap-4 p-6 bg-safari-bone rounded-2xl hover:shadow-md transition-shadow"
                     >
-                      <div className="flex-shrink-0">
+                      <div className="shrink-0">
                         <img
                           src={activity.coverImage.url}
                           alt={activity.title}
@@ -314,11 +313,11 @@ export default function TripResultsPage() {
                 {itinerary.map((day, idx) => (
                   <div key={idx} className="relative">
                     {idx < itinerary.length - 1 && (
-                      <div className="absolute left-[19px] top-12 bottom-0 w-0.5 bg-safari-border" />
+                      <div className="absolute left-4.75 top-12 bottom-0 w-0.5 bg-safari-border" />
                     )}
                     
                     <div className="flex gap-6">
-                      <div className="flex-shrink-0">
+                      <div className="shrink-0">
                         <div className="w-10 h-10 bg-safari-gold text-white rounded-full flex items-center justify-center font-bold">
                           {day.day}
                         </div>
@@ -336,7 +335,7 @@ export default function TripResultsPage() {
                               key={actIdx}
                               className="flex gap-4 p-4 bg-safari-bone rounded-xl"
                             >
-                              <div className="flex-shrink-0 text-safari-gold font-bold text-sm w-20">
+                              <div className="shrink-0 text-safari-gold font-bold text-sm w-20">
                                 {activity.time}
                               </div>
                               <div className="flex-1">
@@ -370,7 +369,7 @@ export default function TripResultsPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="bg-gradient-to-br from-safari-green/5 to-safari-gold/5 rounded-3xl p-8 border border-safari-border"
+              className="bg-linear-to-br from-safari-green/5 to-safari-gold/5 rounded-3xl p-8 border border-safari-border"
             >
               <h2 className="text-3xl font-instrument-serif mb-6">
                 Local Recommendations
@@ -398,7 +397,7 @@ export default function TripResultsPage() {
                   <ul className="space-y-2">
                     {recommendations.tips.map((tip, idx) => (
                       <li key={idx} className="flex items-start gap-2 text-sm text-safari-charcoal/80">
-                        <CheckCircle size={16} className="text-safari-green flex-shrink-0 mt-0.5" />
+                        <CheckCircle size={16} className="text-safari-green shrink-0 mt-0.5" />
                         <span>{tip}</span>
                       </li>
                     ))}
@@ -468,7 +467,7 @@ export default function TripResultsPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="bg-gradient-to-br from-safari-green to-safari-green/80 text-white rounded-3xl p-8 shadow-lg"
+                className="bg-linear-to-br from-safari-green to-safari-green/80 text-white rounded-3xl p-8 shadow-lg"
               >
                 <h3 className="text-2xl font-instrument-serif mb-4">
                   Ready to Book?
