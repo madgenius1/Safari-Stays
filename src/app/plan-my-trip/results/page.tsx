@@ -131,7 +131,7 @@ export default function TripResultsPage() {
           <h1 className="text-5xl md:text-6xl font-instrument-serif text-safari-charcoal mb-4">
             Your Personalized Itinerary
           </h1>
-          <p className="text-xl text-safari-charcoal/70 max-w-2xl mx-auto">
+          <p className="text-xl text-safari-charcoal/70 max-w-4xl mx-auto">
             {tripPlan.preferences.duration} nights in {accommodation.property.location.area} • {tripPlan.preferences.guests} {tripPlan.preferences.guests === 1 ? 'guest' : 'guests'} • {activities.length} activities curated
           </p>
         </motion.div>
