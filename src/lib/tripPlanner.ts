@@ -73,13 +73,13 @@ export function matchProperty(preferences: TripPreferences): Property | null {
     if (property.capacity.guests === guests) score += 10;
 
     // WiFi bonus for work retreats
-    if (property.wifi && property.wifi.speed >= 50) score += 5;
+    //if (property.wifi && property.wifi.speed >= 50) score += 5;
 
     // Featured property bonus
     if (property.featured) score += 5;
 
     // High rating bonus
-    if (property.rating >= 4.8) score += 10;
+    //if (property.rating >= 4.8) score += 10;
 
     return { property, score };
   });

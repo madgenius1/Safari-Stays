@@ -79,6 +79,9 @@ export interface Property {
   name: string;
   tagline: string;
   description: string;
+  rating: string;
+  wifi: string;
+  contact: string;
   location: Location;
   pricing: PriceInfo;
   capacity: Capacity;
