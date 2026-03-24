@@ -61,6 +61,10 @@ export const properties: Property[] = [
     averageRating: 4.9,
     reviewCount: 27,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -109,6 +113,10 @@ export const properties: Property[] = [
     averageRating: 4.8,
     reviewCount: 19,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   // ============================================================================
@@ -166,6 +174,10 @@ export const properties: Property[] = [
     averageRating: 4.7,
     reviewCount: 34,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -214,6 +226,10 @@ export const properties: Property[] = [
     averageRating: 4.9,
     reviewCount: 41,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -256,6 +272,10 @@ export const properties: Property[] = [
     averageRating: 4.6,
     reviewCount: 22,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   // ============================================================================
@@ -313,6 +333,10 @@ export const properties: Property[] = [
     averageRating: 4.8,
     reviewCount: 56,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -356,6 +380,10 @@ export const properties: Property[] = [
     averageRating: 4.7,
     reviewCount: 38,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -399,6 +427,10 @@ export const properties: Property[] = [
     averageRating: 4.9,
     reviewCount: 29,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   // ============================================================================
@@ -446,6 +478,10 @@ export const properties: Property[] = [
     averageRating: 4.8,
     reviewCount: 31,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -488,6 +524,10 @@ export const properties: Property[] = [
     averageRating: 4.5,
     reviewCount: 18,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -530,6 +570,10 @@ export const properties: Property[] = [
     averageRating: 4.7,
     reviewCount: 24,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   // ============================================================================
@@ -575,6 +619,10 @@ export const properties: Property[] = [
     averageRating: 4.4,
     reviewCount: 47,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -617,6 +665,10 @@ export const properties: Property[] = [
     averageRating: 4.8,
     reviewCount: 35,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -660,6 +712,10 @@ export const properties: Property[] = [
     averageRating: 5.0,
     reviewCount: 16,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 
   {
@@ -702,5 +758,9 @@ export const properties: Property[] = [
     averageRating: 4.6,
     reviewCount: 28,
     status: 'active',
+    rating: '',
+    wifi: '',
+    contact: '',
+    phone: 0
   },
 ];

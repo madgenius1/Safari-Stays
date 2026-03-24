@@ -118,6 +118,7 @@ export const destinations: Destination[] = [
     propertyCount: 8,
     coordinates: { lat: -1.2921, lng: 36.8219 },
     featured: true,
+    bestTimeToVisit: ''
   },
 
   {
@@ -208,6 +209,7 @@ export const destinations: Destination[] = [
     propertyCount: 3,
     coordinates: { lat: -4.3333, lng: 39.5667 },
     featured: true,
+    bestTimeToVisit: ''
   },
 
   {
@@ -284,6 +286,7 @@ export const destinations: Destination[] = [
     propertyCount: 2,
     coordinates: { lat: -1.4061, lng: 35.0050 },
     featured: true,
+    bestTimeToVisit: ''
   },
 
   {
@@ -355,6 +358,7 @@ export const destinations: Destination[] = [
     propertyCount: 1,
     coordinates: { lat: -2.2717, lng: 40.9020 },
     featured: true,
+    bestTimeToVisit: ''
   },
 
   {
@@ -426,6 +430,7 @@ export const destinations: Destination[] = [
     propertyCount: 3,
     coordinates: { lat: 0.0167, lng: 37.0667 },
     featured: false,
+    bestTimeToVisit: ''
   },
 
   {
@@ -490,6 +495,7 @@ export const destinations: Destination[] = [
     propertyCount: 1,
     coordinates: { lat: -3.3667, lng: 40.0333 },
     featured: false,
+    bestTimeToVisit: ''
   },
 
   {
@@ -554,6 +560,7 @@ export const destinations: Destination[] = [
     propertyCount: 1,
     coordinates: { lat: -0.7667, lng: 36.3500 },
     featured: false,
+    bestTimeToVisit: ''
   },
 
   {
@@ -625,5 +632,6 @@ export const destinations: Destination[] = [
     propertyCount: 1,
     coordinates: { lat: -4.0435, lng: 39.6682 },
     featured: false,
+    bestTimeToVisit: ''
   },
 ];

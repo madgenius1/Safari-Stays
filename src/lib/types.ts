@@ -82,6 +82,7 @@ export interface Property {
   rating: string;
   wifi: string;
   contact: string;
+  phone: number;
   location: Location;
   pricing: PriceInfo;
   capacity: Capacity;
@@ -158,6 +159,7 @@ export interface Destination {
   propertyCount: number;
   coordinates: Coordinates;
   featured?: boolean;
+  bestTimeToVisit: string;
 }
 
 // EXPERIENCE TYPES
@@ -352,6 +354,7 @@ export interface SEOMetadata {
 export interface TripPreferences {
   budget: number;
   destination: string;
+  bestTimeToVisit?: string;
   guests: number;
   vibe: string[];
   duration: number; // number of nights
